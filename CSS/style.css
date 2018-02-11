@@ -99,6 +99,15 @@ header {
     color: rgba( 36, 48, 64, 1);
 }
 
+@media (max-width: 540px) {
+    header {
+        padding: .75em;
+    }
+    .headerLogo {
+        font-size: 75%;
+    }
+}
+
 /*---------------------------------------Nav Styling---------------------------*/
 
 nav a {
@@ -197,6 +206,18 @@ nav a:hover {
      .hero p {
          padding-top: 4em;
          letter-spacing: .120em;
+     }
+ }
+
+ @media (max-width: 540px) {
+     .heroTag {
+         font-size: 2.5em;
+     }
+     .hero p {
+         font-size: 12px;
+     }
+     .hero {
+         height: 200px;
      }
  }
 
