@@ -55,12 +55,10 @@ table {
 }
 
 /*---------------------------------------General Body Styling---------------------------*/
-
 body{
     color: rgba( 36, 48, 64, 1);
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
-    overflow-x: hidden;
 }
 
 h1 {
@@ -102,7 +100,7 @@ header {
 
 @media (max-width: 540px) {
     header {
-        padding: .75em;
+        padding: .75em 0;
     }
     .headerLogo {
         font-size: 75%;
