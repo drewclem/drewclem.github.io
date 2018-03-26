@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+	<html>
+
+		<head>
+
+			<title>Drew Clements | Designer &amp; Developer</title>
+
+			<meta charset="utf-8">
+
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+			<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
+
+			<!-- Latest compiled and minified CSS -->
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+			<!-- Optional theme -->
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+			<!-- Latest compiled and minified JavaScript -->
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+						
+			<link rel="stylesheet" href="CSS/dcStyles.css">
+			
+			<link rel="shortcut icon" href="images/flameIcon.png"/>
+
+		</head>
+
+		<body>
+
+			<div class="container-fluid">         <!--Header Starts Here-->
+
+				<header class="row">                 <!--Header Starts Here-->
+
+					<div class="headerLogo col-xs-12 col-sm-5 col-md-6">
+
+						<a href="index.html">
+
+							<h1 class="firstName">DREW<span class="lastName">CLEMENTS</span></h1>
+						
+						</a>
+
+					</div>
+
+					<nav class="col-sm-7 col-md-6">    <!--Nav Starts Here-->
+
+						<div class="row">
+
+							<ul align="right">
+
+								<li class="col-3"><a href="blog.html">BLOG</a></li>
+
+								<li class="col-3"><a href="#">ABOUT</a></li>
+
+								<li class="col-3"><a href="contact.html">CONTACT</a></li>
+
+							</ul>
+
+						</div>
+
+					</nav>        <!--Nav ends Here-->
+
+				</header>    <!--Header Ends Here-->
+
+				</div>
+            
+
+			
+            <div class="container"> <!--Blog starts here-->
+
+				<div class="row">
+
+                    <div class="col-xs-12 col-md-8 col-md-offset-2 blogWrapper">
+
+                        <h1>Blog</h1>
+
+                        <div class="blogPost">
+
+                            <div class="blogTitle">
+
+                                <h3 class="title">Building a Weather App with Vanilla Javascript</h3>
+
+                                <h6 class="blogDate">March 26, 2018</h6>
+
+                            </div>
+
+                            <p class="cl-xs-12">
+                                
+                            Currently, in my coding journey, I’m working my way through Free Code Camp’s curriculum. One of my recent projects required me
+                            to build a weather app that worked with an API of my choice to deliver the weather and location of an area based on the individual’s geolocation.
+                            Another ‘user story’ I needed to meet was to allow users to switch between Fahrenheit and Celsius. This was my first introduction to working with an
+                            API so I knew there was going to be a steep learning curve but I was excited at the chance to finally get some practical application of Javascript
+                            and to build a functioning product.<br><br>
+                        
+                            I started my project by deciding what API I wanted to use for my project. These projects are built and submitted in codepens and to minimize the number
+                            of external assets I’d be using I knew I wanted an API that came with weather icons. After doing a little research and seeing some feedback from fellow
+                            campers I decided to use the OpenWeatherMap API. Setting up an account was as easy as it could be and their free accounts allow up to 7,200 calls per day
+                            and caps calls per minute at 60. This obviously wouldn’t be ideal for a high traffic product for the sake of this project it would work splendidly.<br><br>
+
+                            Once I had that set up I was ready to get coding. I started out by building out my HTML. I didn’t get overly fancy with the architecture or design since
+                            the emphasis of the build would be on the Javascript. The original HTML markup had placeholder information in the temp and location div’s so I could see
+                            what I was styling but that was later removed since the app would be populating information for those divs on load. One thing I did inside of my HTML was,
+                            and I’m sure this is standard practice for everyone else, I went ahead and placed id’s to the elements I knew I would want to target later with my Javascript.<br><br>
+
+                            <img src="images/blogImgs/weatherApp/img1.png" alt="HTML Markup for Weather app" class="img-responsive"><br><br>
+
+                            After the HTML was in place I took a few minutes to give it a little styling. Again, the main purpose of this project was to work with Javascript so the HTML &amp;
+                            CSS got the bare minimum treatment. At first, I wanted to give each the same amount of attention but I ultimately was too anxious to get into the JS.<br><br>
+
+                            <img src="images/blogImgs/weatherApp/img2.png" alt="CSS Styling" class="center-block img-responsive"><br><br>
+
+                            And now on to the fun stuff.<br><br>
+
+                            Now, this was literally my first time working with an API and with Javascript on this level so I had to do a lot of reading, watching and researching to
+                            complete this project. Unfortunately for me, 99.9% of the tutorials, forums, blogs, etc… on this project are all with jQuery. I have nothing against the language
+                            but I was dead set on using vanilla JS so the resources I had to help me through the process were limited.<br><br>
+
+                            I started off my JS by creating empty variables of the information I would want to call and manipulate later which were icon, temp, and location. I also created
+                            a variable called APPID and in it, I stored my API key so I could easily call it when needed rather than typing the 32 digit alphanumeric sequence each time.<br><br>
+
+                            Once I had my global variables set I wrote a function that would update the appropriate divs with the weather information the API would later retrieve. I was
+                            able to test that this was working by using strings and numbers since I hadn’t fully set up the API.<br><br>
+
+                            <img src="images/blogImgs/weatherApp/img3.png" alt="Javascript to update weather" class="center-block img-responsive"><br><br>
+
+                            With the update function working properly I then set up a window.onload function that would gather the users’ geolocation using navigator.geolocation when
+                            the screen is loaded. Inside the navigator.geolocation I wrapped the latitude and longitude information inside a call for the function updateByGeo, which was
+                            the next step. The onload function also grabs the HTML elements that will need to be targeted.<br><br>
+
+                            <img src="images/blogImgs/weatherApp/img4.png" alt="Javscript to get users location; if allowed." class="center-block img-responsive"><br><br>
+
+                            Now to build the updateByGeo function that will create the URL needed to use the OpenWeatherMap API to gather the weather information. This function is
+                            fairly simple. It simply creates a variable called URL and creates the URL needed for the API and concatenates the latitude and longitude needed, as well as
+                            your API key. At the end of the function, there’s a call for a sendRequest(URL) which takes the URL we just created earlier in the function. Building that sendRequest is next.<br><br>
+
+                            <img src="images/blogImgs/weatherApp/img5.png" alt="Functin to call API to use user's location." class="center-block img-responsive"><br><br>
+
+                            Building a JSON send request was new territory for me and I had to rely on a lot of outside resources to accomplish this part.<br><br>
+
+                            <img src="images/blogImgs/weatherApp/img6.png" alt="JSON request." class="center-block img-responsive"><br><br>
+
+                            Essentially what happens in this function is it takes the url we created in the updateByGeo function which uses the user’s geolocation and sends it to OpenWeatherMap
+                            API and from there we can parse through the information we receive and deliver it back to the user.<br><br>
+
+                            Remember earlier where we built a function that would update the div’s with the appropriate information? Here is where that information comes in! Above in the
+                            weather.icon, weather.loc, and weather.temp objects you can see where we are retrieving the weather information from the API.<br><br>
+
+                            data.weather[0].icon, data.name, and data.main.temp are retrieving information from an array the API sends back once the user location is known. It looks like
+                            the image below. At the end of all of that data gathering, we’re telling the javascript to run our update function we created earlier. So now we’re
+                            populating the app with the user’s weather conditions based on their global positioning!<br><br>
+
+                            <img src="images/blogImgs/weatherApp/img7.png" alt="OpenWeatherMap returned array." class="center-block img-responsive"><br><br>
+
+                            We still have a few things left to do though. OpenWeatherMap delivers temperature in Kelvin so we’ll need to convert that to either Celsius or Fahrenheit.
+                            We also need to allow the user to swap back and forth between Fahrenheit and Celsius.<br><br>
+
+                            <img src="images/blogImgs/weatherApp/img8.png" alt="Example of our temperature data wrapped in a conversion function." class="center-block img-responsive"><br><br>
+
+                            You may have noticed above that our data.main.temp was wrapped in a K2F function. That’s because I had already written the function before writing this.
+                            I’m no scientist or mathematician so for this I had to google the conversion formula. Once you have that formula you can simply drop it into a function with the
+                            call ‘return.’ One thing to remember is the default setting will give you numbers will give you decimal points for days so you may want to put the equation in a Math.floor.<br><br>
+
+                            Since we’re already in math mode we’ll go ahead and build functions to convert Celsius to Fahrenheit and vice versa. Again, a quick google search will give you the
+                            formula you need and then you can drop it into a function.<Br><br>
+
+                            <img src="images/blogImgs/weatherApp/img9.png" alt="Weather conversion functions." class="center-block img-responsive"><br><br>
+
+                            We're almost there!<br><br>
+
+                            All that's left is to build the toggle between Celsius and Fahrenheit. We'll do this with an if/else statement. We're telling the javascript that if you see one degree
+                            type in this specific div to change it to the other when clicked. That call should go both ways for the function.<br><br>
+
+                            <img src="images/blogImgs/weatherApp/img10.png" alt="F to C and C to F toggle." class="center-block img-responsive"><br><br>
+
+                            One tiny thing left. We need an event listener! We need to tell the javascript to listen for a specific event, in this case, a click, to run our toggle function.
+                            To me, ending this project with writing such a simple function felt like the cherry on top.<br><br>
+
+                            <img src="images/blogImgs/weatherApp/img11.png" alt="Calling the toggle function." class="center-block img-responsive"><br><br>
+
+                            That’s it! We now have a functioning weather app built with vanilla javascript! I learned a lot in this project. Most notably, how to work with API’s;
+                            to an extent. I know each API works differently than others but finally being exposed to one and also using javascript in a practical sense rather than writing
+                            random loops or strings has been super informative and a huge learning experience.<br><br>
+
+                            If you’ve made it this far, thanks for taking the time to read this and I hope it has helped anyone who ended up here because they were looking for assistance.<br><br>
+
+                            My next project is a wikipedia viewer for Free Code Camp and there will be a follow up blog to that a well!<br><br>
+
+                            </p>
+
+                        </div>
+
+                        <div class="blogPost">
+
+                                <div class="blogTitle">
+    
+                                    <h3 class="title">Learn to Code. Remember to Breathe.</h3>
+    
+                                    <h6 class="blogDate">March 5, 2018</h6>
+    
+                                </div>
+    
+                                <p class="cl-xs-12">
+
+                                <img src="images/blogImgs/learnToCode/coffee.jpeg" class="center-block img-responsive" alt="Coffee Coder"><br><br>
+
+                                Over the last couple of months, I have been working as hard and as diligently as I can to become a front-end developer. I was coming home from work,
+                                skipping the gym, having a quick bite of supper with my wife and then sitting at my computer working through every course, video, etc.… that I could get my hands on.
+                                I made a good bit of progress that first week or two but then the amount of information I was absorbing and retaining dropped drastically and my attention span
+                                towards my studies took a stiff drop as well, and I hated it. I wanted to learn to code, I wanted to build websites and apps and I wanted to create digital architectures
+                                of design that would stand as technological masterpieces as the Eiffel Tower and the Sistine Chapel were (I had high hopes for myself, huh?).<br><br>
+
+                                So, I started really looking at the schedule and habits I had been trying maintain and develop and realized how horribly unhealthy and unattainable they were.
+                                My brain needed a break. I needed a break. More importantly, I needed to make these breaks a regular part of my routine for the sake of my happiness, ability to learn and for my marriage.<br><br>
+
+                                If you do anything for too long with high intensity you could easily get burnt out, lose focus or have so little strength (mental or physical) left that your efforts aren’t really
+                                adding any true benefit to the cause. Twenty pounds isn’t terribly heavy but even the strongest man can only lift it for so long before it wears on him.<br><br>
+
+                                The fix to this problem is easy. Give yourself time to breathe and relax in anything you do. There’s nothing wrong with working towards a goal with vigorous tenacity but the key
+                                is making sure you’re managing that vigor in a healthy way that promotes consistent progress and plenty of r &amp; r for your mind.<br><br>
+
+                                Learn to code. Remember to breathe.<br><br>
+    
+                                </p>
+    
+                            </div>
+
+                    </div>
+
+                </div>
+
+            </div>   <!--blog ends here-->
+
+            
+
+			<div class="container-fluid">  <!--Footer Starts here-->
+
+				<div class="row">
+
+					<footer class="footerAnchor">
+
+						<div class="col-xs-12" align="center">
+
+							<div class="row">
+
+								<ul class="footerNav">
+
+									<li><a href="https://github.com/drewclem">Github | </a></li>
+
+									<li><a href="https://twitter.com/drewclemcr8">Twitter | </a></li>
+
+									<li><a href="https://www.facebook.com/drewclementscreative/">Facebook | </a></li>
+
+									<li><a href="https://www.linkedin.com/in/drew-clements-172333158/">Linked In</a></li>
+										
+								</ul>
+
+							</div>
+
+							<div class="row">
+
+								<p class="copyRight">&#169; 2018 Drew Clements</p>
+
+							</div>
+								
+						</div>
+
+					</footer>
+
+				</div>
+
+			</div>
+
+		</body>
+
+		<script>
+		
+		
+		
+		</script>
+
+	</html>

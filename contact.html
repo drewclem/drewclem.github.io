@@ -31,9 +31,9 @@
 
 			<div class="container-fluid">         <!--Header Starts Here-->
 
-				<header class="row">                 
+				<header class="row">                 <!--Header Starts Here-->
 
-					<div class="headerLogo col-xs-4 col-sm-5 col-md-6">
+					<div class="headerLogo col-xs-12 col-sm-5 col-md-6">
 
 						<a href="index.html">
 
@@ -43,15 +43,15 @@
 
 					</div>
 
-					<nav class="col-xs-8 col-sm-7 col-md-6">    <!--Nav Starts Here-->
+					<nav class="col-sm-7 col-md-6">    <!--Nav Starts Here-->
 
 						<div class="row">
 
 							<ul align="right">
 
-								<li class="col-3"><a href="#">BLOG</a></li>
+								<li class="col-3"><a href="blog.html">BLOG</a></li>
 
-								<li class="col-3"><a href="#">WORK</a></li>
+								<li class="col-3"><a href="#">ABOUT</a></li>
 
 								<li class="col-3"><a href="contact.html">CONTACT</a></li>
 
@@ -61,27 +61,29 @@
 
 					</nav>        <!--Nav ends Here-->
 
-				</header>    
-			
-            </div>   <!--Header Ends Here-->
+				</header>    <!--Header Ends Here-->
+
+				</div>
             
 
 			
             <div class="container">
 
-                <div class="contactForm col-xs-12 col-sm-8">
+				<div class="row">
+
+                <div class="contactForm col-xs-12 col-md-8 col-md-offset-2">
 
                     <h1 class="formHead">Contact Me</h1>
 
-                    <p>Let's create some digital magic. Send me some info below.</p>
+                    <p>Let's create something fun! Send me some info below.</p>
 
-                    <form method="POST" action="mailto: drewclementsdesign@gmail.com">
+                    <form method="post" action="mailto:drewclementsdesign@gmail.com" enctype="text/plain">
 
                         <div class="formElement">
 
                             <label for="">Name:</label> <br>
 
-                            <input type="text" value="" class="formInput" required>
+                            <input type="text" class="formInput" required autofocus>
 
                         </div>
 
@@ -89,7 +91,7 @@
 
                             <label for="">Email:</label> <br>
     
-                            <input type="text" value="" class="formInput" required>
+                            <input type="text" class="formInput" required>
     
                         </div>
 
@@ -97,13 +99,15 @@
 
                             <label for="">Comment:</label> <br>
         
-                            <textarea name="comment" id="" class="formInput comment" style="height: 100px" required></textarea>
+                            <textarea name="comment" class="formInput comment" style="height: 100px" required></textarea>
         
                         </div>
+
+						<button class="formSubmit" type="submit">Submit</button>
                         
                     </form>
 
-                    <button class="formSubmit">Submit</button>
+				</div>
 
                 </div>
 
@@ -115,7 +119,7 @@
 
 				<div class="row">
 
-					<footer>
+					<footer class="footerAnchor">
 
 						<div class="col-xs-12" align="center">
 
@@ -150,5 +154,11 @@
 			</div>
 
 		</body>
+
+		<script>
+		
+		
+
+		</script>
 
 	</html>
