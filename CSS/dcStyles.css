@@ -161,9 +161,9 @@ nav a:hover {
     padding-top: 1em;
     color: white;
     font-weight: 800;
-    font-size: 7em;
+    font-size: 10em;
     letter-spacing: .112em;
-    line-height: .72em;
+    line-height: .70em;
 }
 
 .ampersand {
@@ -182,7 +182,11 @@ nav a:hover {
 }
 
 /*-----------------------------------------------Media Queries for Hero Image-----------------*/
-
+@media (max-width: 1290px) {
+    .heroTag {
+        font-size: 7em;
+    }
+}
 
 @media (max-width: 992px) {
     .hero {
@@ -226,6 +230,10 @@ nav a:hover {
      }
  }
 
+ .homeWide {
+     width: 100% !important;
+     display: block;
+ }
 
 /*---------------Previous work--------------------------*/
 
