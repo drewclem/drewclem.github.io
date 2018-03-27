@@ -59,6 +59,16 @@ body{
     color: rgba( 36, 48, 64, 1);
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
+    overflow-x: hidden;
+}
+
+#body{
+    opacity: 0;
+}
+
+#body.fadeIn{
+    opacity: 100;
+    transition: 1.5s;
 }
 
 h1 {
@@ -128,6 +138,10 @@ nav a:hover {
     text-decoration: none;
     border-left: 2px solid rgba( 36, 48, 64, 1);
     transition: all ease-in-out 200ms;
+}
+
+nav a .active {
+    background-color: rgba( 36, 48, 64, 1);
 }
 
 /*-----------------------------------------------Media Queries for Nav-----------------*/
@@ -228,11 +242,6 @@ nav a:hover {
      .hero {
          height: 200px;
      }
- }
-
- .homeWide {
-     width: 100% !important;
-     display: block;
  }
 
 /*---------------Previous work--------------------------*/
@@ -365,7 +374,7 @@ nav a:hover {
  .contactForm {
      font-weight: 700;
      padding: 2em 5%;
-     min-height: 675px;
+     min-height: 700px;
  }
 
 .contactForm h1 {
@@ -425,7 +434,15 @@ form {
     padding-bottom: .55em;
 }
 
+.blogPost a{
+    text-decoration: none;
+    padding: 10px 0;
+}
+
 .blogPost p{
     line-height: 24px;
     font-size: 18px;
 }
+
+
+
