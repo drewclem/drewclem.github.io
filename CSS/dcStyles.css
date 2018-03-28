@@ -260,16 +260,16 @@ nav a .active {
 
  @media (max-width: 540px) {
      .heroTag {
-         font-size: 2.25em;
-         padding-top: 4em;
+         font-size: 3em;
+         padding-top: 3em;
      }
      .hero p {
-         font-size: 10px;
          padding-top: 2.5em;
          letter-spacing: .10em;
+         line-height: 24px;
      }
      .hero {
-         height: 475px;
+         height: 500px;
      }
  }
 
