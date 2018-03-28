@@ -121,7 +121,7 @@ header {
 
 @media (max-width: 768px) {
     header {
-        padding: 10px 0;
+        padding: .75em 0;
     }
 }
 
@@ -180,7 +180,6 @@ nav a .active {
         z-index: 1;
         left: 0;
         overflow-x: hidden;
-        display: none;
     }
 }
 /*-----------------------------------Hero Styling----------------------------*/
@@ -199,7 +198,7 @@ nav a .active {
 }
 
 .heroTag {
-    padding-top: .75em;
+    padding-top: 1em;
     color: white;
     font-weight: 800;
     font-size: 10em;
@@ -260,16 +259,14 @@ nav a .active {
 
  @media (max-width: 540px) {
      .heroTag {
-         font-size: 3em;
-         padding-top: 3em;
+         font-size: 2.5em;
      }
      .hero p {
-         padding-top: 2.5em;
-         letter-spacing: .10em;
-         line-height: 24px;
+         font-size: 12px;
+         padding-top: 2em;
      }
      .hero {
-         height: 500px;
+         height: 200px;
      }
  }
 
@@ -297,7 +294,7 @@ nav a .active {
 /*--------------------blog tease---------------------------*/
 .blogTease {
     overflow: hidden;
-    padding: 2em 0;
+    padding: 10px 0;
 }
 
 /*-------------------------------Lower Image and Available styling -----------------------*/
@@ -307,6 +304,7 @@ nav a .active {
     color: white;
     font-size: 3em;
     font-weight: 800;
+    height: inherit;
     float: right;
     padding: 1em .5em;
 }
