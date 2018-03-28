@@ -13,7 +13,12 @@ function toggleNav() {
     element.classList.toggle("navCollapse");
 }
 
+//toggle blog
+function toggleBlog() {
+    const element= document.getElementById("blogPost")
 
+    element.classList.toggle("blogExpand");
+}
 
 
 
