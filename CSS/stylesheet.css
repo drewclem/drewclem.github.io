@@ -1,0 +1,229 @@
+/* http://meyerweb.com/eric/tools/css/reset/v2.0 | 20110126License: none (public domain)*/
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed,figure, figcaption, footer, header, hgroup,menu, nav, output, ruby, section, summary,time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*---------------------------Reset Ends Here------------*/
+/*--------------------Global Styling----------------------*/
+:root {
+	--blue: rgba( 36, 48, 64, 1);
+	--green: rgba(170, 202, 59, 1);
+	--blueTrans: rgba(36, 48, 64, .95);
+}
+body{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	color: var(--blue);
+	overflow-x: hidden;
+}
+#body{
+	opacity: 0;
+}
+#body.fadeIn{
+	opacity: 100;
+	transition: 1.5s;
+}
+a {
+	color: var(--blue);
+}
+a:hover {
+	text-decoration: none;
+	color: white;
+	transition: .25s;
+}
+h1{
+	font-size: 4rem;
+	font-weight: 800;
+}
+h2{
+	font-size: 3.5rem;
+	font-weight: 800;
+}
+h3 {
+	font-size: 3rem;
+	font-weight: 400;
+}
+h4{
+	font-size: 2.5rem;
+	font-weight: 400;
+}
+h5{
+	font-size: 2rem;
+	font-weight: 400;
+}
+h6{
+	font-size: 1.5em;
+	font-weight: 400;
+}
+.green {
+	color: var(--green);
+}
+/*----------------------------------Header/Nav Styling----------------------------*/
+header {
+	background-image: url("../images/heroImg-alt.jpg");
+	position: fixed;
+	background-position: top center;
+	background-size: cover;
+	background-attachment: fixed;
+	overflow: none;
+	background-repeat: no-repeat;
+}
+header img {
+	padding: 0;
+}
+/*---------header queries-----*/
+@media (max-width: 1220px){
+	header{
+		background-size: 150%;
+	}
+}
+@media (max-width: 960px){
+	header{
+		background-size: 120%;
+	}
+}
+@media (max-width: 768px){
+	header{
+		background-size: 140%;
+	}
+}
+@media (max-width: 540px){
+	header{
+		background-size: 170%;
+	}
+}
+/*-------------nav styling---------*/
+nav a{
+	color: var(--green);
+	padding: .25rem .25rem .25rem .5rem;
+	font-weight: 600;
+	display:inline-block;
+}
+nav a:hover {
+	border-left: 2px solid var(--blue);
+	color: var(--green);
+}
+nav {
+	padding: 5px 0 0 5px;
+	text-align: right;
+}
+nav ul{
+	text-align: right;
+}
+.navBar{
+	padding: 1rem;
+}
+.navButton {
+	height: 32px;
+	float: right;
+	padding-right: 10px;
+	padding-bottom: 5px;
+}
+@media (max-width: 768px) {
+	nav {
+		margin-top: 30px;
+		z-index: 1000;
+	}
+	nav ul li {
+		width: 100%;
+		padding: 5px;
+	}
+	nav a:hover {
+		border-left: 2px solid white;
+		color: var(--green);
+	}
+	.navCollapse {
+		height: 0;
+		position: absolute;
+		z-index: 1;
+		right: 0;
+		overflow: hidden;
+	}
+	nav ul{
+		position: absolute;
+		right: 0;
+		background-color: var(--blueTrans);
+		width: 100%;
+		padding: 10px 0;
+	}
+}
+/*-------Nav Bar Name-----*/
+.logo {
+	font-weight: 700;
+	font-size: 1.5em;
+	color: white;
+}
+.logo a{
+	color: white;
+}
+.lastName {
+	font-weight: 500;
+}
+/*----Designer & Developer----*/
+.heroTag {
+	color: white;
+	text-align: center;
+	padding: 10% 0;
+}
+.heroTag h1{
+	font-size: 6em;
+}
+.devTag{
+	letter-spacing: .25rem;
+}
+.heroTag p {
+	font-size: 1rem;
+	letter-spacing: .40rem;
+	padding-top: 50px;
+}
+/*------Hero Tag media querieries-----*/
+@media (max-width: 960px) {
+	.heroTag {
+		padding-top: 10%;
+	}
+	.heroTag h1 {
+		font-size: 3.5em;
+	}
+	.heroTag p{
+		letter-spacing: .125rem;
+		padding-top: 25px;
+	}
+	.devTag {
+		letter-spacing: .125rem;
+	}
+}
+@media (max-width: 768px){
+	.heroTag h1{
+		font-size: 2.75em;
+	}
+}
+.content{
+	text-align: center;
+	padding: 50px 0;
+	height: 800px;
+}

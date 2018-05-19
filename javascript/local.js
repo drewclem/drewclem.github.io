@@ -1,7 +1,7 @@
 //fade in on load
 const body = document.getElementById("body");
 
-window.onload = function() {
+window.onload = function () {
     body.classList.add("fadeIn");
 };
 
@@ -9,16 +9,13 @@ window.onload = function() {
 //toggle nav
 function toggleNav() {
     const element = document.getElementById("navToggle")
-    
+
     element.classList.toggle("navCollapse");
 }
 
 //toggle blog
 function toggleBlog() {
-    const element= document.getElementById("blogPost")
+    const element = document.getElementById("blogPost")
 
     element.classList.toggle("blogExpand");
 }
-
-
-
