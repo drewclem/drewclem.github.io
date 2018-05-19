@@ -130,19 +130,19 @@ nav a:hover {
 	color: var(--green);
 }
 nav {
-	padding: 5px 0 0 5px;
+	padding: 0 0 0 5px;
 	text-align: right;
 }
 nav ul{
 	text-align: right;
 }
 .navBar{
-	padding: 1rem;
+	padding: 1rem 0;
 }
 .navButton {
 	height: 32px;
 	float: right;
-	padding-right: 10px;
+	padding-right: 15px;
 	padding-bottom: 5px;
 }
 @media (max-width: 768px) {
@@ -170,7 +170,7 @@ nav ul{
 		right: 0;
 		background-color: var(--blueTrans);
 		width: 100%;
-		padding: 10px 0;
+		padding: 10px;
 	}
 }
 /*-------Nav Bar Name-----*/
