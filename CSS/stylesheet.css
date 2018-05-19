@@ -97,11 +97,7 @@ header img {
 	padding: 0;
 }
 /*---------header queries-----*/
-@media (max-width: 1220px){
-	header{
-		background-size: 150%;
-	}
-}
+
 @media (max-width: 960px){
 	header{
 		background-size: 120%;
@@ -115,6 +111,11 @@ header img {
 @media (max-width: 540px){
 	header{
 		background-size: 170%;
+	}
+}
+@media (max-width: 460px){
+	header{
+		background-size: 190%;
 	}
 }
 /*-------------nav styling---------*/
