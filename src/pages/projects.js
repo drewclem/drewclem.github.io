@@ -75,9 +75,9 @@ const Projects = () => (
           <li>Weather Map API</li>
         </ul>
 
-        <a href='https://coltxp.com' className='btn-red' target='_blank' rel='noopener noreferrer'>View</a>
+        <a href='https://codepen.io/dckeywork87/pen/paXeKz' className='btn-red' target='_blank' rel='noopener noreferrer'>View</a>
 
-        <a href='https://github.com/drewclem/Colt' className='github' target='_blank' rel='noopener noreferrer'>
+        <a href='https://codepen.io/dckeywork87/pen/paXeKz' className='github' target='_blank' rel='noopener noreferrer'>
           <FontAwesomeIcon className='github' icon={faCodepen}/>
         </a>
       </div>
