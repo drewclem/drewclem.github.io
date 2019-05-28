@@ -377,6 +377,7 @@ Media Queries
   }
   main{
     margin: 0;
+    padding: 10px;
   }
   header{
     padding: 0;
@@ -461,6 +462,12 @@ button{
   .page-title{
     margin-bottom: 30px;
   }
+  button{
+    font-size: 14px;
+  }
+  body{
+    font-size: 14px;
+  }
 }
 
 .btn-red{
@@ -512,7 +519,7 @@ button{
 }
 
 ::placeholder{
-  color: rgb(204, 204, 204);
+  color: var(--trans-blue);
 }
 
 
@@ -691,9 +698,8 @@ form textarea{
 form div{
   margin-bottom: 20px;
 }
-
 form label{
-  color: var(--trans-blue);
+  color: var(--blue);
   font-weight: 700;
 }
 form input{
