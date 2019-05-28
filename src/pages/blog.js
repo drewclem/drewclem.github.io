@@ -10,6 +10,7 @@ const Blog = () => (
     <div className='interior-anchor'></div>
 
     <h1 className="page-title">Blog</h1>
+  <p>This page is still in development. Stay tuned!</p>
 
     <div className='article'>
 
