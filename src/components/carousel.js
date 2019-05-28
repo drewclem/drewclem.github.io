@@ -35,6 +35,7 @@ const CarouselUI = ({ position, handleClick, children, total }) =>
       />
     </div>
     {children}
+    <p>Swipe for more!</p>
   </div>;
 const Carousel = makeCarousel(CarouselUI);
 

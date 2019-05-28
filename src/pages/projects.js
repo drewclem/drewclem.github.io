@@ -31,7 +31,7 @@ const Projects = () => (
 
         <a href='https://coltxp.com' className='btn-red' target='_blank' rel='noopener noreferrer'>View</a>
 
-        <a href='www.github.com' className='github' target='_blank' rel='noopener noreferrer'>
+        <a href='https://github.com/drewclem/Colt' className='github' target='_blank' rel='noopener noreferrer'>
           <FontAwesomeIcon className='github' icon={faGithub}/>
         </a>
       </div>
@@ -77,7 +77,7 @@ const Projects = () => (
 
         <a href='https://coltxp.com' className='btn-red' target='_blank' rel='noopener noreferrer'>View</a>
 
-        <a href='www.github.com' className='github' target='_blank' rel='noopener noreferrer'>
+        <a href='https://github.com/drewclem/Colt' className='github' target='_blank' rel='noopener noreferrer'>
           <FontAwesomeIcon className='github' icon={faCodepen}/>
         </a>
       </div>

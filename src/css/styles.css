@@ -335,7 +335,7 @@ Carousel Styles
     width: 300px;
     height: 300px;
     margin: 0 auto;
-    top: 0;
+    top: 20px;
   }
   .carouselUi img{
     margin: 0 auto;
@@ -348,6 +348,21 @@ Carousel Styles
     top: 275px;
     left: 75px;
     transform: rotate(180deg);
+  }
+}
+@media(max-width: 768px){
+  .carouselUi .carouselControls{
+    display: none;
+  }
+  .carouselUi p{
+    text-align: center;
+    position: relative;
+    top: 275px;
+  }
+}
+@media(min-width: 768px){
+  .carouselUi p{
+    display: none;
   }
 }
 
@@ -406,6 +421,11 @@ Media Queries
     .nav-open{
       right: 0;
     }
+}
+@media(max-width: 768px){
+  .main-menu{
+    margin-top: 20px;
+  }
 }
 
 /*-------------------------------------------
@@ -496,6 +516,11 @@ button{
   background-color: var(--trans-blue);
   color: var(--white)
 }
+
+::placeholder{
+  color: rgb(204, 204, 204);
+}
+
 
 /*-------------------------------------------
 ---------------------------------------------
@@ -682,11 +707,15 @@ form input{
   font-size: 16px;
   padding-top: 5px;
 }
+form textarea{
+  font-size: 16px;
+}
 form input,
 form textarea{
   border-radius: 5px;
   border: 1px solid var(--drop-shadow);
   margin-top: 10px;
+  line-height: 20px
 }
 @media(max-width: 768px){
   .contact h2{
