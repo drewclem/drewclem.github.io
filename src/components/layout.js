@@ -21,9 +21,9 @@ const Layout = ({ children }) => (
       <>
         <Header />
         <main>
-          <div className='content'>
+          <section className='content'>
             {children}
-          </div>
+          </section>
         </main>
       </>
     )}

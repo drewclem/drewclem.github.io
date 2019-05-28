@@ -1,22 +1,34 @@
 import { Link } from "gatsby"
-import React from "react"
+import React, {Component} from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faFacebook, faGithub } from '@fortawesome/free-brands-svg-icons'
-import Bounce from 'react-reveal/Bounce'
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
-class Nav extends React.Component {
+class Nav extends Component {
+  constructor(props){
+    super(props);
+
+    this.toggleNav = this.toggleNav.bind(this);
+    this.state = {
+      active: false
+    }
+  }
+
+  toggleNav(){
+      const currentstate = this.state.active
+      this.setState({active: !currentstate})
+  }
 
   render() {
     return (
       <div>
-        <nav>
-          <Bounce top cascade>
+        <nav className={this.state.active ? 'nav-open' : 'nav-closed'}>
             <ul className='main-menu'>
               <li>
-                <Link activeClassName='active' to='/about/'>About</Link>
+                <Link activeClassName='active' to='/projects/'>Projects</Link>
               </li>
               <li>
-                <Link activeClassName='active' to='/projects/'>Projects</Link>
+                <Link activeClassName='active' to='/about/'>About</Link>
               </li>
               <li>
                 <Link activeClassName='active' to='/blog/'>Blog</Link>
@@ -25,25 +37,27 @@ class Nav extends React.Component {
                 <Link activeClassName='active' to='/contact/'>Contact</Link>
               </li>
             </ul>
-          </Bounce>
           <ul className="social-links">
             <li>
-              <a href='/' target='_blank'>
+              <a href='https://www.facebook.com/drewclementscreative/' target='_blank' rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faTwitter}/>
               </a>
             </li>
             <li>
-              <a href='/' target='_blank'>
+              <a href='https://twitter.com/drewclemcr8' target='_blank' rel='noopener noreferrer'>
                 <FontAwesomeIcon icon={faFacebook}/>
               </a>
             </li>
             <li>
-              <a href='/' target='_blank'>
+              <a href='https://github.com/drewclem' target='_blank' rel='noopener noreferrer'>
                 <FontAwesomeIcon icon={faGithub}/>
               </a>
             </li>
           </ul>
         </nav>
+        <button  className='nav-toggle' onClick={this.toggleNav} style={{zIndex: 9999}}> 
+          <FontAwesomeIcon icon={faBars}/>
+        </button>
       </div>
     );
   }
