@@ -15,19 +15,21 @@ const Contact = () => (
 
       <div className='form-wrapper'>
         <h2>Get in touch</h2>
-        <form>
+        <form action='/thanks/' data-netlify="true" name='contact' method='POST' netlify-honeypot="bot-field">
           <div>
             <label>Name</label>
-            <input type='text' placeholder='A person has a name'/>
+            <input type='text' name='name' placeholder='A person has a name'/>
           </div>
           <div>
             <label>Email</label>
-            <input type='text' placeholder=''/>
+            <input type='text' name='email' placeholder=''/>
           </div>
           <div>
             <label>Message</label>
-            <textarea rows='8'></textarea>
+            <textarea rows='8' name='message' ></textarea>
           </div>
+          <input name="bot-field" type='hidden'/>
+          <input type="hidden" name="form-name" value="contact" />
           <button className='btn-red'>
             Send
           </button>
