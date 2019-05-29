@@ -2,16 +2,17 @@ backend:
   name: git-gateway
   branch: master
 
-media_folder: "/images/uploads"
+media_folder: src/images/upload
+public_folder: /static
 
 collections:
   - name: "blog"
     label: "Blog"
-    folder: "_posts/blog"
+    folder: "src/posts/blog"
     create: true
-    identifier_field: name
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "list"}
