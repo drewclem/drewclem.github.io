@@ -42,7 +42,7 @@ const Carousel = makeCarousel(CarouselUI);
 const HomeSlider = () => (
         <Carousel
           className='carousel'
-          defaultWait={10000}>
+          defaultWait={3000}>
           <Animation>
             <img  src={Home1} alt='home1'/>
           </Animation>

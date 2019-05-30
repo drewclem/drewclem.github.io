@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import {Link} from '@reach/router'
-//import Image from "../components/image"
+// import Image from "../components/image"
 import Slider from '../components/carousel'
 import SEO from "../components/seo"
 
