@@ -40,17 +40,17 @@ class Nav extends Component {
           <ul className="social-links">
             <li>
               <a href='https://twitter.com/drewclemcr8' target='_blank' rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faTwitter}/>
+                <FontAwesomeIcon icon={faTwitter} style={{width: 16}}/>
               </a>
             </li>
             <li>
               <a href='https://www.facebook.com/drewclementscreative/' target='_blank' rel='noopener noreferrer'>
-                <FontAwesomeIcon icon={faFacebook}/>
+                <FontAwesomeIcon icon={faFacebook} style={{width: 16}}/>
               </a>
             </li>
             <li>
               <a href='https://github.com/drewclem' target='_blank' rel='noopener noreferrer'>
-                <FontAwesomeIcon icon={faGithub}/>
+                <FontAwesomeIcon icon={faGithub} style={{width: 16}}/>
               </a>
             </li>
           </ul>

@@ -17,6 +17,7 @@ const CarouselUI = ({ position, handleClick, children, total }) =>
         icon={faCaretLeft}
         onClick={handleClick}
         data-position={position - 1}
+        style={{height: 22}}
       />
 
       <span className='dots'>
@@ -32,6 +33,7 @@ const CarouselUI = ({ position, handleClick, children, total }) =>
         icon={faCaretRight}
         onClick={handleClick}
         data-position={position + 1}
+        style={{height: 22}}
       />
     </div>
     {children}
