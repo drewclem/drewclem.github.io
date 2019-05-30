@@ -1,7 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
-import '../css/styles.css'
+import '../../static/css/styles.css'
+import Animation from 'react-reveal/Slide'
 
 import Header from "./header"
 //import "./layout.css"
@@ -22,7 +23,9 @@ const Layout = ({ children }) => (
         <Header />
         <main>
           <section className='content'>
-            {children}
+            <Animation bottom>
+              {children}
+            </Animation>
           </section>
         </main>
       </>
