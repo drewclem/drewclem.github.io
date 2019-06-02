@@ -156,7 +156,6 @@ header h1 a {
 
 .main-menu a:hover{
   font-weight: 700;
-  color: var(--white);
   color: var(--blue);
 }
 .nav-toggle{
@@ -664,6 +663,9 @@ About Styles
 Blog Styles
 ---------------------------------------------
 -------------------------------------------*/
+.blog-title{
+  text-transform: capitalize
+}
 .article{
   margin-top: 70px;
   border-bottom: 2px solid var(--trans-red);
