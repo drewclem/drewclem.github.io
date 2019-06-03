@@ -5,6 +5,7 @@ import Home1 from '../images/home1.jpg'
 import Home2 from '../images/home2.jpg'
 import Home3 from '../images/home3.jpg'
 import Home4 from '../images/home4.jpg'
+import Home6 from '../images/home6.jpg'
 import '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faCaretLeft, faCaretRight } from '@fortawesome/free-solid-svg-icons'
@@ -50,6 +51,9 @@ const HomeSlider = () => (
           </Animation>
           <Animation>
             <img  src={Home2} alt='home2'/>
+          </Animation>
+          <Animation>
+            <img src={Home6} alt='home6'/>
           </Animation>
           <Animation>
             <img  src={Home3} alt='home3'/>

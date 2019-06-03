@@ -301,10 +301,10 @@ Carousel Styles
   text-align: center;
   transform: rotate(90deg);
   position: absolute;
-  width: 150px;
+  width: 200px;
   z-index: 3;
-  left: 370px;
-  top: 175px;
+  left: 320px;
+  top: 165px;
 }
 .carouselUi img{
   width: 350px;
