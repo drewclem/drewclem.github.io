@@ -7,11 +7,11 @@ public_folder: "uploads"
 collections: 
   - name: "blog"
     label: "Blog"
-    folder: "pages/posts"
+    folder: "src/pages/posts"
     create: true
     fields:
         - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
         - {label: "Title", name: "title", widget: "string"}
         - {label: "path", name: "path", widget: "string"}
-        - {label: "Publish Date", name: "date", widget: "string"}
+        - {label: "Publish Date", name: "date", widget: "datetime"}
         - {label: "Body", name: "body", widget: "markdown"}
