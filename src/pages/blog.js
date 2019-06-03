@@ -1,29 +1,19 @@
-import React from "react"
-//import { Link } from "gatsby"
+import React, {Component} from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import BlogRoll from '../components/blogRoll'
 
-const Blog = () => (
-  <Layout>
-
-    <SEO title="Blog" />
-    <div className='interior-anchor'></div>
-
-    <h1 className="page-title">Blog</h1>
-  <p>This page is still in development. Stay tuned!</p>
-
-    <div className='article'>
-
-      <h3>Building a weather app with Vanilla Javascript</h3>
-
-      <p style={{
-        marginBottom: 20
-      }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
-
-      <button className='btn-blue'>Read</button>
-    </div>
-
-  </Layout>
-)
+class Blog extends Component {
+  render(){
+    return(
+      <Layout>
+        <SEO title="Blog" />
+        <div className='interior-anchor'></div>
+        <h1 className="page-title">Blog</h1>
+        <BlogRoll />
+      </Layout>
+    )
+  }
+}
 
 export default Blog
