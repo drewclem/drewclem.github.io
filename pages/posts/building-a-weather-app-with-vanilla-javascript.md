@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: Building a Weather App with Vanilla Javascript
+title: Learn to Code. Remember to Breathe
 path: /building-a-weather-app
 date: 2019-06-03T03:28:14.096Z
 ---
