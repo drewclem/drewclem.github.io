@@ -474,7 +474,7 @@ button{
   color: var(--blue);
   border: 2px solid var(--red);
   position: relative;
-  padding: 7px 30px;
+  padding: 5px 30px;
   transition: 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .btn-red:after{
@@ -664,16 +664,30 @@ Blog Styles
 ---------------------------------------------
 -------------------------------------------*/
 .blog-title{
-  text-transform: capitalize
+  text-transform: capitalize;
+  color: var(--blue);
+}
+.post p{
+  color: var(--blue);
+  margin-bottom: 20px;
+}
+.article .date,
+.post .date{
+  color: var(--red);
+  margin-bottom: 10px;
+}
+.post .date{
+  margin-bottom: 20px;
+}
+.article .btn-blue{
+  padding:5px 30px
 }
 .article{
-  margin-top: 70px;
-  border-bottom: 2px solid var(--trans-red);
-  padding-bottom: 20px;
+  margin-bottom: 70px;
 }
 .article h3{
-  width: 40%;
-  line-height: 150%;
+  width: 60%;
+  margin-bottom: 10px;
 }
 @media(max-width: 768px){
   .article h3{

@@ -12,7 +12,7 @@ class BlogRoll extends Component {
             posts.map(({node: post}) => (
               <div className='article'>
                 <h3>{post.frontmatter.title}</h3>
-                <p><small>{post.frontmatter.publishdate}</small></p>
+                <p class='date'><small>{post.frontmatter.publishdate}</small></p>
                 <p style={{
                   marginBottom: 20
                 }}>{post.excerpt}</p>
@@ -32,7 +32,7 @@ export default () => (
         allMarkdownRemark{
           edges{
             node{
-              excerpt(pruneLength: 400)
+              excerpt(pruneLength: 300)
               id
               frontmatter{
                 title

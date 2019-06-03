@@ -8,11 +8,11 @@ export default function Template({data}) {
 
   return (
     <Layout>
-    <div>
+    <div className='post'>
       <h2 className='blog-title'>{article.frontmatter.title}</h2>
-      <h6>{article.frontmatter.publishdate}</h6>
+      <h6 className='date'>{article.frontmatter.publishdate}</h6>
       <p dangerouslySetInnerHTML={{__html: article.html}}/>
-      <Link to='/blog'></Link>
+      <Link to='/blog' className='btn-blue'>Back to Blog</Link>
     </div>
     </Layout>
   )
