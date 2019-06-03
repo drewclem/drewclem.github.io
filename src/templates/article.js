@@ -25,7 +25,7 @@ export const articleQuery = graphql`
       frontmatter {
         path
         title
-        publishdate(formatString: "MMMM DD, YYYY")
+        publishdate
       }
     }
   }

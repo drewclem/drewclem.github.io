@@ -36,7 +36,7 @@ export default () => (
               id
               frontmatter{
                 title
-                publishdate(formatString: "MMMM DD, YYYY")
+                publishdate
                 path
               }
             }
