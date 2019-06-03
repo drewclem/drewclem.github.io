@@ -25,4 +25,4 @@ If you do anything for too long with high intensity you could easily get burnt o
 
 The fix to this problem is easy. Give yourself time to breathe and relax in anything you do. There’s nothing wrong with working towards a goal with vigorous tenacity but the key is making sure you’re managing that vigor in a healthy way that promotes consistent progress and plenty of r & r for your mind.
 
-\# Learn to code. Remember to breathe.
+Learn to code. Remember to breathe.

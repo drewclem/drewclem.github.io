@@ -682,6 +682,10 @@ Blog Styles
 .article .btn-blue{
   padding:5px 30px
 }
+.post h2{
+  text-transform: capitalize;
+  font-size:20px;
+}
 .article{
   margin-bottom: 70px;
 }
