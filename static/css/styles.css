@@ -667,7 +667,7 @@ Blog Styles
   text-transform: capitalize;
   color: var(--blue);
 }
-.post p{
+.post div{
   color: var(--blue);
   margin-bottom: 20px;
 }
