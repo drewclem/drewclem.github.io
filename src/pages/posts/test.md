@@ -1,5 +1,5 @@
 ---
-title: Learn to Code. Remember to Breathe
+title: Learn to Code. Remember to Breathe.
 path: /learn-to-code
 publishdate: 'June 2, 2019'
 ---
