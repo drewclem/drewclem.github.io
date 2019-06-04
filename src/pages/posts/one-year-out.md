@@ -36,7 +36,7 @@ A year ago? I was struggling to make CSS do what I wanted it to and thought I wo
 
 ## Becoming a Dad
 
-On September 6th, 2019 at 11:46 P.M. we welcomed Evelyn Rose into the world. I always wanted to be a parent but I was never sure if I could handle it. Thankfully, I have an amazing wife and she's taught me a lot about how to care for a baby. I mean, before this I had never been around newborns on this level. It's an experience. It's a challenge. It's the single greatest thing that has happened to me. I hope everyone gets to experience a love and bond of this level at some point in their life. It's too great of a thing to not experience.
+On September 6th, 2018 at 11:46 P.M. we welcomed Evelyn Rose into the world. I always wanted to be a parent but I was never sure if I could handle it. Thankfully, I have an amazing wife and she's taught me a lot about how to care for a baby. I mean, before this I had never been around newborns on this level. It's an experience. It's a challenge. It's the single greatest thing that has happened to me. I hope everyone gets to experience a love and bond of this level at some point in their life. It's too great of a thing to not experience.
 
 ## Where from here?
 
