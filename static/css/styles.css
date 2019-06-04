@@ -671,6 +671,9 @@ Blog Styles
   color: var(--blue);
   margin-bottom: 20px;
 }
+.post p{
+  margin-bottom: 20px;
+}
 .article .date,
 .post .date{
   color: var(--red);
