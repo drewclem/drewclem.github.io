@@ -14,7 +14,7 @@ const Contact = () => (
       }}>Am I the droid you're looking for? Shoot me a quick email and we can chat about you're upcoming project! </p>
 
       <div className='form-wrapper'>
-        <h1>Thanks for you message!</h1>
+        <h1>Thanks for your message!</h1>
         <p>I'll do my absolute best to respond as quickly as I can!</p>
 
         <Link
