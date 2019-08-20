@@ -469,7 +469,10 @@ button{
     font-size: 14px;
   }
 }
-
+.btn-red,
+.btn-blue{
+  font-family: 'Montserrat', sans-serif
+}
 .btn-red{
   color: var(--blue);
   border: 2px solid var(--red);
@@ -667,8 +670,11 @@ Blog Styles
   text-transform: capitalize;
   color: var(--blue);
 }
-.post p{
+.post div{
   color: var(--blue);
+  margin-bottom: 20px;
+}
+.post p{
   margin-bottom: 20px;
 }
 .article .date,
