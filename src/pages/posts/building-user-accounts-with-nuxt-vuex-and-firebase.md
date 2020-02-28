@@ -2,7 +2,7 @@
 layout: blog
 title: 'Building User Accounts with Nuxt, Vuex, and Firebase'
 path: /user-accounts-with-nuxt-firebase-vuex
-publishdate: 2/25/2020
+publishdate: 'February 26, 2020'
 ---
 Recently, I was working to implement user accounts into my application I've been building with Nuxt as the frontend and Firebase for the backend/database. I found a lot of useful articles but there were always caveats to them. Some only showed part of the process (usually the part I already had figured out) or they used a method that was way more verbose than what my situation called for. That brings us here! Without further adieux, Building user accounts with Nuxt, Firebase, and Vuex in the simplest way I know.
 
