@@ -24,9 +24,9 @@ const Projects = () => (
         }}>Tech:</h3>
 
         <ul>
-          <li>ReactJS</li>
+          <li>Vue/Nuxt</li>
           <li>Firebase</li>
-          <li>CSS</li>
+          <li>Tailwind CSS</li>
         </ul>
 
         <a href='https://coltxp.com' className='btn-red' target='_blank' rel='noopener noreferrer'>View</a>
