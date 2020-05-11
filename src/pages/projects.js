@@ -110,7 +110,9 @@ const Projects = () => (
       <div className="project-copy">
         <p>
           The FNF app is a full-stack project with a Node API hosted on heroku
-          and a Gatsby front-end hosted on Netlify.
+          and a Gatsby front-end hosted on Netlify. The goal of this project was
+          to build a read-only API and display the data on a separately hosted
+          front-end.
         </p>
 
         <h3
@@ -158,7 +160,7 @@ const Projects = () => (
     </div>
 
     <div className="project-item">
-      <h2>Layerframe Animation</h2>
+      <h2>Layerframe</h2>
 
       <div className="project-copy">
         <p>
