@@ -18,15 +18,15 @@ const Contact = () => (
         <form action='/thanks/' data-netlify="true" name='contact' method='POST' netlify-honeypot="bot-field">
           <div>
             <label>Name</label>
-            <input type='text' name='name' placeholder='Richard Hendricks' required/>
+            <input type='text' name='name' required/>
           </div>
           <div>
             <label>Email</label>
-            <input type='text' name='email' placeholder='richard@piedpiper.com' required/>
+            <input type='text' name='email' required/>
           </div>
           <div>
             <label>Message</label>
-            <textarea rows='8' name='message' placeholder="We're just trying to make the world a better place through middle out data compression!" required></textarea>
+            <textarea rows='8' name='message' required></textarea>
           </div>
           <input name="bot-field" type='hidden'/>
           <input type="hidden" name="form-name" value="contact" />
