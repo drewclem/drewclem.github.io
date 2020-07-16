@@ -3,7 +3,7 @@
     class="w-screen md:w-auto md:bg-gray-200 absolute top-0 md:fixed flex md:items-center flex-col md:justify-center"
   >
     <div
-      class="flex md:block bg-white md:bg-transparent z-50 flex-row justify-between px-4 md:px-0"
+      class="flex md:block bg-white md:bg-transparent z-50 flex-row justify-between px-4 md:px-0 md:mb-6"
     >
       <router-link
         to="/"
@@ -25,7 +25,7 @@
       :class="[isActive ? 'mobile-nav-open' : 'mobile-nav-closed']"
       class="bg-gray-100 md:bg-transparent py-4"
     >
-      <GlobalHeaderNav class="mb-8"></GlobalHeaderNav>
+      <GlobalHeaderNav class="mb-12"></GlobalHeaderNav>
 
       <GlobalHeaderSocialIcons></GlobalHeaderSocialIcons>
     </div>
@@ -70,7 +70,7 @@ header a {
 
 @media (min-width: 768px) {
   header {
-    min-width: 250px;
+    min-width: 200px;
     height: 100vh;
   }
 }

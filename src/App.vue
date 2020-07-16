@@ -2,7 +2,7 @@
   <div class="text-blue-900 font-body" id="app">
     <GlobalHeader />
 
-    <main>
+    <main class="mt-24 flex px-4 md:px-0">
       <router-view />
     </main>
   </div>
@@ -19,4 +19,19 @@ export default {
 };
 </script>
 
-<style lang="postcss" scope></style>
+<style scoped>
+main div {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  main {
+    margin-left: 200px;
+  }
+
+  main div {
+    margin: 0 auto;
+    max-width: 680px;
+  }
+}
+</style>

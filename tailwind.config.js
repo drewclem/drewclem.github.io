@@ -5,7 +5,7 @@ module.exports = {
   },
   theme: {
     fontFamily: {
-      display: ["Poppins", "sans-serif"],
+      display: ["Montserrat", "sans-serif"],
       body: ["Roboto slab", "sans-serif"],
     },
   },

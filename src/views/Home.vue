@@ -1,5 +1,9 @@
 <template>
-  <div><h1>Hello</h1></div>
+  <div>
+    <h1 class="font-display font-black text-6xl leading-none">
+      Developer <br /><span class="text-red-600">&amp;</span>Designer
+    </h1>
+  </div>
 </template>
 
 <script>

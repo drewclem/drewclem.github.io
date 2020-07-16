@@ -1,25 +1,26 @@
 <template>
   <nav>
-    <ul class="font-display font-medium uppercase text-center">
+    <ul class="font-display font-light uppercase text-center">
       <li
-        class="text-2xl tracking-wider mb-3 opacity-75 hover:opacity-100 transition ease-in-out duration-75"
+        class="text-lg md:text-2xl tracking-wider mb-6 transition ease-in-out duration-75"
       >
-        <router-link to="/">Home</router-link>
+        <router-link class="opacity-75 hover:opacity-100" to="/projects"
+          >Projects</router-link
+        >
       </li>
       <li
-        class="text-2xl tracking-wider mb-3 opacity-75 hover:opacity-100 transition ease-in-out duration-75"
+        class="text-lg md:text-2xl tracking-wider mb-6 transition ease-in-out duration-75"
       >
-        <router-link to="/projects">Projects</router-link>
+        <router-link class="opacity-75 hover:opacity-100" to="/blog"
+          >Blog</router-link
+        >
       </li>
       <li
-        class="text-2xl tracking-wider mb-3 opacity-75 hover:opacity-100 transition ease-in-out duration-75"
+        class="text-lg md:text-2xl tracking-wider mb-6 transition ease-in-out duration-75"
       >
-        <router-link to="/blog">Blog</router-link>
-      </li>
-      <li
-        class="text-2xl tracking-wider mb-3 opacity-75 hover:opacity-100 transition ease-in-out duration-75"
-      >
-        <router-link to="/contact">Contact</router-link>
+        <router-link class="opacity-75 hover:opacity-100" to="/contact"
+          >Contact</router-link
+        >
       </li>
     </ul>
   </nav>
@@ -31,4 +32,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.router-link-active {
+  @apply font-bold opacity-100;
+}
+</style>
