@@ -1,9 +1,10 @@
 <template>
   <header
-    class="w-screen md:w-auto md:bg-gray-200 absolute top-0 md:fixed flex md:items-center flex-col md:justify-center"
+    class="w-screen md:w-auto md:bg-gray-200 absolute top-0 md:fixed flex md:items-center flex-col md:pt-24"
   >
     <div
       class="flex md:block bg-white md:bg-transparent z-50 flex-row justify-between px-4 md:px-0 md:mb-6"
+      :class="[isActive ? 'shadow-md' : '']"
     >
       <router-link
         to="/"
@@ -75,7 +76,7 @@ header a {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .mobile-nav-closed {
     margin-top: -350px;
     transition: 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275);

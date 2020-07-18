@@ -24,8 +24,8 @@ export default {
 
 <style scoped>
 a svg {
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   @apply opacity-75 transition ease-in-out duration-100;
 }
 

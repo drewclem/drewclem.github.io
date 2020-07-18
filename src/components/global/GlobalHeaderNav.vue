@@ -1,24 +1,24 @@
 <template>
   <nav>
     <ul class="font-display font-light uppercase text-center">
-      <li
-        class="text-lg md:text-2xl tracking-wider mb-6 transition ease-in-out duration-75"
-      >
-        <router-link class="opacity-75 hover:opacity-100" to="/projects"
+      <li class="text-lg md:text-2xl tracking-wider mb-6">
+        <router-link
+          class="opacity-75 hover:opacity-100 transition ease-in-out duration-75"
+          to="/projects"
           >Projects</router-link
         >
       </li>
-      <li
-        class="text-lg md:text-2xl tracking-wider mb-6 transition ease-in-out duration-75"
-      >
-        <router-link class="opacity-75 hover:opacity-100" to="/blog"
+      <li class="text-lg md:text-2xl tracking-wider mb-6">
+        <router-link
+          class="opacity-75 hover:opacity-100 transition ease-in-out duration-75"
+          to="/blog"
           >Blog</router-link
         >
       </li>
-      <li
-        class="text-lg md:text-2xl tracking-wider mb-6 transition ease-in-out duration-75"
-      >
-        <router-link class="opacity-75 hover:opacity-100" to="/contact"
+      <li class="text-lg md:text-2xl tracking-wider mb-6">
+        <router-link
+          class="opacity-75 hover:opacity-100 transition ease-in-out duration-75"
+          to="/contact"
           >Contact</router-link
         >
       </li>
@@ -34,6 +34,8 @@ export default {
 
 <style scoped>
 .router-link-active {
-  @apply font-bold opacity-100;
+  transform: rotate(15deg);
+  @apply bg-red-600 text-white font-bold opacity-100
+    px-3 py-1;
 }
 </style>
