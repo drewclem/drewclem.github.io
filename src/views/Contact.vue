@@ -1,11 +1,18 @@
 <template>
   <div>
-    <h1>Contact</h1>
+    <BaseHeadingH1>Contact</BaseHeadingH1>
   </div>
 </template>
 
 <script>
-export default {};
+import BaseHeadingH1 from "../components/base/BaseHeadingH1";
+
+export default {
+  name: "Contact",
+  components: {
+    BaseHeadingH1,
+  },
+};
 </script>
 
 <style lang="postcss" scoped></style>

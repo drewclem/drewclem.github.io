@@ -8,5 +8,8 @@ Vue.config.productionTip = false;
 
 new Vue({
   router,
+  scrollBehavior() {
+    return { x: 0, y: 0 };
+  },
   render: (h) => h(App),
 }).$mount("#app");

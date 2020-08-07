@@ -1,9 +1,18 @@
 <template>
   <div class="flex flex-col items-center">
-    <a href="https://github.com/drewclem/" class="mb-4">
+    <a
+      href="https://github.com/drewclem/"
+      class="mb-4"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <Github />
     </a>
-    <a href="https://twitter.com/drewclemcr8">
+    <a
+      href="https://twitter.com/drewclemcr8"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <Twitter />
     </a>
   </div>
@@ -26,7 +35,7 @@ export default {
 a svg {
   width: 18px;
   height: 18px;
-  @apply opacity-75 transition ease-in-out duration-100;
+  @apply opacity-75 transition ease-in-out duration-150;
 }
 
 a:hover svg {

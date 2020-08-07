@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="md:flex flex-row">
-      <div class="md:w-2/3 relative">
+      <div class="w-3/4 lg:w-2/3 relative">
         <div class="w-12 h-12 bg-red-600 hidden md:block absolute"></div>
 
         <p
@@ -26,13 +26,7 @@
           <p class="text-blue-900 opacity-75 md:w-4/5 leading-relaxed">
             Hi! I'm just a dad trying to do right by his family! I work as a
             front-end engineer at
-            <a
-              href="https://layerframe.co"
-              target="_blank"
-              rel="noopener referrer"
-              >Layerframe</a
-            >
-            and
+
             <a
               href="https://fostercommerce.com"
               target="_blank"
@@ -48,17 +42,15 @@
           </p>
         </div>
       </div>
-      <div class="md:w-1/3 -ml-24 mt-12">
+      <div class="w-3/4 lg:w-1/3 lg:-ml-24 mt-12">
         <BaseCarousel :slides="images" type="image" class="hidden md:block" />
       </div>
     </div>
 
-    <p class="text-sm text-red-600 mt-12 mb-5">
+    <p class="text-sm text-red-600 mt-12 mb-3">
       Am I the droid you're looking for?
     </p>
-    <button
-      class="border-2 border-blue-900 hover:bg-gray-300 relative transition duration-150 ease-in-out px-6 py-1"
-    >
+    <button class="btn">
       <router-link to="/contact" class="no-underline">Message Me</router-link>
     </button>
   </div>

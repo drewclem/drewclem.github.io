@@ -1,24 +1,5 @@
-<template>
-  <Swiper :options="swiperOption" ref="mySwiper" class="swiper">
-    <SwiperSlide
-      :key="index"
-      v-for="(slide, index) in slides"
-      class="slide rounded-full overflow-hidden"
-    >
-      <img :src="slide.src" class="object-center object-cover" />
-    </SwiperSlide>
-
-    <div
-      class="swiper-pagination"
-      v-for="(slide, index) in slides"
-      :key="index"
-      slot="pagination"
-    ></div>
-  </Swiper>
-</template>
-
 <script>
-import { Swiper, SwiperSlide } from "vue-awesome-swiper";
+import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper";
 import "../../assets/css/swiper.css";
 
 export default {
@@ -30,15 +11,15 @@ export default {
         spaceBetween: 20,
         loop: true,
         centeredSlides: true,
-        pagination: {
-          el: ".swiper-pagination",
-          type: "bullets",
-        },
         autoplay: {
           delay: 2500,
+          disableOnInteraction: true,
         },
       },
     };
+  },
+  directives: {
+    swiper: directive,
   },
   props: {
     slides: {
@@ -62,6 +43,24 @@ export default {
   },
 };
 </script>
+
+<template>
+  <Swiper
+    :options="swiperOption"
+    ref="mySwiper"
+    class="swiper rounded-full overflow-hidden"
+  >
+    <SwiperSlide
+      :key="index"
+      v-for="(slide, index) in slides"
+      class="slide rounded-full overflow-hidden"
+    >
+      <img :src="slide.src" class="object-center object-cover" />
+    </SwiperSlide>
+
+    <div class="swiper-pagination" slot="pagination"></div>
+  </Swiper>
+</template>
 
 <style scoped>
 .slide,

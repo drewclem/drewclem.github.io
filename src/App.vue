@@ -2,7 +2,7 @@
   <div class="text-blue-900 font-body" id="app">
     <GlobalHeader />
 
-    <main class="mt-20 flex px-4 lg:px-0">
+    <main class="mt-24 lg:mt-20 flex px-4 lg:px-0">
       <router-view />
     </main>
   </div>
@@ -35,7 +35,7 @@ header {
 
   main div {
     margin: 0 auto;
-    max-width: 768px;
+    max-width: 600px;
   }
 }
 </style>
