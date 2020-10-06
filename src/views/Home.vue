@@ -1,29 +1,31 @@
 <template>
   <div>
-    <div class="md:flex flex-row">
-      <div class="w-3/4 lg:w-2/3 relative">
-        <div class="w-12 h-12 bg-red-600 hidden md:block absolute"></div>
+    <div class="flex-row md:flex">
+      <div class="relative w-3/4 lg:w-2/3">
+        <div class="absolute hidden w-12 h-12 bg-red-500 md:block"></div>
 
         <p
-          class="hero-name hidden md:block text-2xl text-red-600 uppercase tracking-widest mb-6 transform -rotate-90"
+          class="hidden mb-6 text-2xl tracking-widest text-red-500 uppercase transform -rotate-90 hero-name md:block"
         >
           Drew Clements
         </p>
 
         <div
-          class="hero-redaccent-left border-t-2 border-red-600 absolute transform -rotate-90"
+          class="absolute transform -rotate-90 border-t-2 border-red-500 hero-redaccent-left"
         ></div>
 
         <div class="hero-lockup">
-          <h1 class="font-display font-black text-6xl leading-none -mt-3 mb-12">
-            Develop<br /><span class="text-gray-300">er</span>
-            <span class="text-red-600"> &amp;</span><br />Design<br /><span
+          <h1 class="mb-12 -mt-3 text-6xl font-black leading-none font-display">
+            Develop<br />
+            <span class="text-gray-300">er</span>
+            <span class="text-red-500"> &amp;</span><br />Design<br /><span
               class="text-gray-300"
-              >er</span
             >
+              er
+            </span>
           </h1>
 
-          <p class="text-blue-900 opacity-75 md:w-4/5 leading-relaxed">
+          <p class="leading-relaxed text-blue-900 opacity-75 md:w-4/5">
             Hi! I'm just a dad trying to do right by his family! I work as a
             front-end engineer at
 
@@ -32,7 +34,8 @@
               target="_blank"
               rel="noopener no referrer"
               >Foster Commerce</a
-            >! Founder of
+            >
+            ! Founder of
             <a
               href="https://protege.dev"
               target="_blank"
@@ -42,12 +45,12 @@
           </p>
         </div>
       </div>
-      <div class="w-3/4 lg:w-1/3 lg:-ml-24 mt-12">
+      <div class="w-3/4 mt-12 lg:w-1/3 lg:-ml-24">
         <BaseCarousel :slides="images" type="image" class="hidden md:block" />
       </div>
     </div>
 
-    <p class="text-sm text-red-600 mt-12 mb-3">
+    <p class="mt-12 mb-3 text-sm text-red-500">
       Am I the droid you're looking for?
     </p>
     <button class="btn">
@@ -110,7 +113,7 @@ export default {
 
 <style lang="postcss" scoped>
 .hero-lockup a {
-  @apply text-red-700 underline;
+  @apply text-red-500 underline;
 }
 
 @media (min-width: 768px) {

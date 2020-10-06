@@ -6,24 +6,24 @@
       <ul>
         <li v-for="project in projects" :key="project.id" class="mb-12">
           <h2
-            class="text-xl lg:text-2xl font-display font-bold text-red-600 mb-4"
+            class="mb-4 text-xl font-bold text-red-500 lg:text-2xl font-display"
           >
             {{ project.title }}
           </h2>
 
-          <p class="opacity-75 mb-4 text-sm lg:text-base">
+          <p class="mb-4 text-sm opacity-75 lg:text-base">
             {{ project.description }}
           </p>
 
-          <ul class="list-disc opacity-75 ml-5 mb-6 text-sm lg:text-base">
+          <ul class="mb-6 ml-5 text-sm list-disc opacity-75 lg:text-base">
             <li v-for="item in project.tech" :key="item.index">{{ item }}</li>
           </ul>
 
           <div class="flex items-center">
-            <button class="btn mr-6">
-              <a :href="project.url" target="_blank" rel="noopener noreferrer"
-                >Visit</a
-              >
+            <button class="mr-6 btn">
+              <a :href="project.url" target="_blank" rel="noopener noreferrer">
+                Visit
+              </a>
             </button>
             <a :href="project.github" target="_blank" rel="noopener noreferrer">
               <Github />

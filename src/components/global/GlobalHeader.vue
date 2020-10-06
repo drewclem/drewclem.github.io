@@ -8,7 +8,7 @@
     >
       <router-link
         to="/"
-        class="font-display font-black text-red-600 text-4xl md:text-6xl md:text-center mb-0 md:mb-8"
+        class="font-display font-black text-red-500 text-4xl md:text-6xl md:text-center mb-0 md:mb-8"
       >
         dC
       </router-link>
