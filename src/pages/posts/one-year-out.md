@@ -1,8 +1,8 @@
 ---
 layout: blog
 title: One Year Out
-path: /one-year-out
-publishdate: 'June 3, 2019'
+path: /blog/one-year-out
+publishdate: June 3, 2019
 ---
 It's been a little over twelve months since I decided to take web development seriously. A lot has changed in that time in a lot of different ways. I started a podcast with two extremely knowledgable developers and learned a lot during its existence (more on that in a bit), I transitioned to my first developer role, I've grown as a developer in general, and perhaps the biggest one is that I became a dad! So, yeah. A LOT has changed.
 
