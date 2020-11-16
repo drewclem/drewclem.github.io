@@ -1,7 +1,7 @@
 ---
 title: Learn to Code. Remember to Breathe.
-path: /learn-to-code
-publishdate: 'June 2, 2019'
+path: /blog/learn-to-code
+publishdate: June 2, 2019
 ---
 _This is an older article originally posted on March 23, 2018_
 
