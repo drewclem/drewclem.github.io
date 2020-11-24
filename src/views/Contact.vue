@@ -1,18 +1,16 @@
-<template>
-  <div>
-    <BaseHeadingH1>Contact</BaseHeadingH1>
-  </div>
-</template>
-
 <script>
-import BaseHeadingH1 from "../components/base/BaseHeadingH1";
+import BaseHeadingH1 from '../components/base/BaseHeadingH1';
 
 export default {
-  name: "Contact",
+  name: 'Contact',
   components: {
     BaseHeadingH1,
   },
 };
 </script>
 
-<style lang="postcss" scoped></style>
+<template>
+  <div>
+    <BaseHeadingH1 class="capitalize">{{ $route.name }}</BaseHeadingH1>
+  </div>
+</template>

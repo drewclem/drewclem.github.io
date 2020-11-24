@@ -1,3 +1,55 @@
+<script>
+import BaseCarousel from '../components/base/BaseCarousel';
+import EvelynDr from '../assets/images/evelyn-dr.jpg';
+import Roan from '../assets/images/roan.jpg';
+import Donut from '../assets/images/home6.jpg';
+import Headshot from '../assets/images/headshot.jpg';
+import E2 from '../assets/images/e2.jpg';
+import E3 from '../assets/images/e3.jpg';
+import E4 from '../assets/images/e4.jpg';
+
+export default {
+  name: 'Home',
+  components: {
+    BaseCarousel,
+  },
+  data: function() {
+    return {
+      images: [
+        {
+          id: 0,
+          src: Headshot,
+        },
+        {
+          id: 1,
+          src: EvelynDr,
+        },
+        {
+          id: 2,
+          src: Roan,
+        },
+        {
+          id: 3,
+          src: Donut,
+        },
+        {
+          id: 4,
+          src: E2,
+        },
+        {
+          id: 5,
+          src: E3,
+        },
+        {
+          id: 6,
+          src: E4,
+        },
+      ],
+    };
+  },
+};
+</script>
+
 <template>
   <div>
     <div class="flex-row md:flex">
@@ -58,58 +110,6 @@
     </button>
   </div>
 </template>
-
-<script>
-import BaseCarousel from "../components/base/BaseCarousel";
-import EvelynDr from "../assets/images/evelyn-dr.jpg";
-import Roan from "../assets/images/roan.jpg";
-import Donut from "../assets/images/home6.jpg";
-import Headshot from "../assets/images/headshot.jpg";
-import E2 from "../assets/images/e2.jpg";
-import E3 from "../assets/images/e3.jpg";
-import E4 from "../assets/images/e4.jpg";
-
-export default {
-  name: "Home",
-  components: {
-    BaseCarousel,
-  },
-  data: function() {
-    return {
-      images: [
-        {
-          id: 0,
-          src: Headshot,
-        },
-        {
-          id: 1,
-          src: EvelynDr,
-        },
-        {
-          id: 2,
-          src: Roan,
-        },
-        {
-          id: 3,
-          src: Donut,
-        },
-        {
-          id: 4,
-          src: E2,
-        },
-        {
-          id: 5,
-          src: E3,
-        },
-        {
-          id: 6,
-          src: E4,
-        },
-      ],
-    };
-  },
-};
-</script>
 
 <style lang="postcss" scoped>
 .hero-lockup a {

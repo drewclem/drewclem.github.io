@@ -15,7 +15,7 @@
 
       <button
         @click="isActive = !isActive"
-        class="md:hidden opacity-75 hover:opacity-100"
+        class="md:hidden opacity-75 hover:opacity-100 px-2"
       >
         <Jedi v-if="!isActive" class="w-8" />
         <Close v-else class="w-6" />
