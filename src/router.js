@@ -1,33 +1,39 @@
-import Vue from "vue";
-import Router from "vue-router";
-import Home from "./views/Home.vue";
-import Blog from "./views/Blog.vue";
-import Projects from "./views/Projects.vue";
-import Contact from "./views/Contact.vue";
+import Vue from 'vue';
+import Router from 'vue-router';
+import Home from './views/Home.vue';
+import Blog from './views/Blog';
+import BlogArticle from './views/Blog/_article_id';
+import Projects from './views/Projects.vue';
+import Contact from './views/Contact.vue';
 
 Vue.use(Router);
 
 export default new Router({
-  mode: "history",
+  mode: 'history',
   routes: [
     {
-      path: "/",
-      name: "home",
+      path: '/',
+      name: 'home',
       component: Home,
     },
     {
-      path: "/blog",
-      name: "blog",
+      path: '/blog',
+      name: 'blog',
       component: Blog,
     },
     {
-      path: "/projects",
-      name: "projects",
+      path: '/blog/:slug',
+      name: 'article',
+      component: BlogArticle,
+    },
+    {
+      path: '/projects',
+      name: 'projects',
       component: Projects,
     },
     {
-      path: "/contact",
-      name: "contact",
+      path: '/contact',
+      name: 'contact',
       component: Contact,
     },
   ],

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;800&family=Roboto+Slab:wght@100;400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;800&family=Roboto+Slab:wght@100;400&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -10,4 +10,53 @@
 
 .btn:hover {
   @apply bg-gray-600 text-white;
+}
+
+*:hover {
+  @apply transition ease-in-out duration-150;
+}
+
+.article-wrapper h1,
+.article-wrapper h2,
+.article-wrapper h3,
+.article-wrapper h4,
+.article-wrapper h5,
+.article-wrapper h6 {
+  @apply font-display font-bold mt-6 mb-3 text-red-500;
+}
+
+.article-wrapper h1 {
+  @apply text-3xl;
+}
+
+.article-wrapper h2 {
+  @apply text-2xl;
+}
+
+.article-wrapper h3 {
+  @apply text-xl;
+}
+
+.article-wrapper h4 {
+  @apply text-lg;
+}
+
+.article-wrapper p {
+  @apply mb-8;
+}
+
+.article-wrapper pre {
+  @apply bg-gray-200 text-red-800 p-6 mb-8 text-sm overflow-auto;
+}
+
+.article-wrapper ul,
+ol {
+  @apply list-disc ml-6 mb-6;
+}
+
+.article-wrapper p a {
+  @apply underline;
+}
+.article-wrapper p em {
+  @apply mt-2 text-sm;
 }

@@ -13,17 +13,14 @@
         dC
       </router-link>
 
-      <button
-        @click="isActive = !isActive"
-        class="md:hidden opacity-75 hover:opacity-100 px-2"
-      >
-        <Jedi v-if="!isActive" class="w-8" />
-        <Close v-else class="w-6" />
+      <button @click="isActive = !isActive" class="md:hidden px-2">
+        <Jedi v-if="!isActive" class="w-5" />
+        <Close v-else class="w-4" />
       </button>
     </div>
 
     <div
-      :class="[isActive ? 'mobile-nav-open' : 'mobile-nav-closed']"
+      :class="[isActive ? 'mobile-nav-open shadow-md' : 'mobile-nav-closed']"
       class="bg-gray-100 md:bg-transparent py-4"
     >
       <GlobalHeaderNav class="mb-12"></GlobalHeaderNav>
@@ -34,13 +31,13 @@
 </template>
 
 <script>
-import GlobalHeaderNav from "./GlobalHeaderNav";
-import GlobalHeaderSocialIcons from "./GlobalHeaderSocialIcons";
-import Jedi from "../../assets/svgs/jedi-order-brands.svg";
-import Close from "../../assets/svgs/times-circle-regular.svg";
+import GlobalHeaderNav from './GlobalHeaderNav';
+import GlobalHeaderSocialIcons from './GlobalHeaderSocialIcons';
+import Jedi from '../../assets/svgs/jedi-order-brands.svg';
+import Close from '../../assets/svgs/times-circle-regular.svg';
 
 export default {
-  name: "GlobalHeader",
+  name: 'GlobalHeader',
   components: {
     GlobalHeaderNav,
     GlobalHeaderSocialIcons,
@@ -51,6 +48,11 @@ export default {
     return {
       isActive: false,
     };
+  },
+  watch: {
+    $route() {
+      this.isActive = false;
+    },
   },
   methods: {
     toggleMenu() {
@@ -79,11 +81,11 @@ header a {
 @media (max-width: 767px) {
   .mobile-nav-closed {
     margin-top: -350px;
-    transition: 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: 250ms ease-in-out;
   }
   .mobile-nav-open {
     margin-top: 0px;
-    transition: 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: 250ms ease-in-out;
   }
 }
 </style>

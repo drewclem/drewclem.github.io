@@ -68,7 +68,7 @@ export default {
           <div class="flex items-center">
             <button class="mr-6 btn">
               <a :href="project.url" target="_blank" rel="noopener noreferrer">
-                Visit
+                View
               </a>
             </button>
             <a :href="project.github" target="_blank" rel="noopener noreferrer">

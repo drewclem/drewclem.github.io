@@ -2,17 +2,17 @@
   <div class="text-blue-900 font-body" id="app">
     <GlobalHeader />
 
-    <main class="flex px-4 mt-24 lg:mt-20 lg:px-0 pb-56">
+    <main class="flex px-4 mt-24 lg:mt-20 lg:px-0 pb-32">
       <router-view />
     </main>
   </div>
 </template>
 
 <script>
-import GlobalHeader from "./components/global/GlobalHeader";
+import GlobalHeader from './components/global/GlobalHeader';
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
     GlobalHeader,
   },
