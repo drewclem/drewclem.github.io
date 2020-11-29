@@ -90,6 +90,8 @@ export default {
         </label>
       </p>
 
+      <input type="hidden" name="form-name" value="contact" />
+
       <button class="btn w-32">Send</button>
     </form>
   </div>
