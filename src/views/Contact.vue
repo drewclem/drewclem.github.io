@@ -1,19 +1,19 @@
 <script>
-import BaseHeadingH1 from '../components/base/BaseHeadingH1';
+import BaseHeadingH1 from "../components/base/BaseHeadingH1"
 
 export default {
-  name: 'Contact',
+  name: "Contact",
   components: {
     BaseHeadingH1,
   },
   data() {
     return {
-      name: '',
-      email: '',
-      comment: '',
-    };
+      name: "",
+      email: "",
+      comment: "",
+    }
   },
-};
+}
 </script>
 
 <template>
@@ -25,7 +25,7 @@ export default {
       name="contact"
       method="POST"
       data-netlify="true"
-      netlify-honeypot="bot-field"
+      data-netlify-honeypot="bot-field"
     >
       <div class="grid md:grid-cols-2 gap-6 mb-8">
         <div class="flex flex-col">
