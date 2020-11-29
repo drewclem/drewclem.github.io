@@ -53,9 +53,8 @@ export default {
     <form
       class="flex flex-col"
       name="contact"
-      method="post"
+      @submit.prevent="handleSubmit"
       data-netlify="true"
-      action="/contact/thanks"
     >
       <div class="grid md:grid-cols-2 gap-6 mb-8">
         <div class="flex flex-col">
