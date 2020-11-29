@@ -32,9 +32,13 @@ export default {
           ...this.form,
         }),
       })
-        .then(() => {
-          console.log("success")
-          this.$router.push("/contact/thanks")
+        .then(res => {
+          if (res.status === 200) {
+            console.log("success")
+            this.$router.push("/contact/thanks")
+          } else {
+            console.log("error")
+          }
         })
         .catch(e => console.error(e))
     },
