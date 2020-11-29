@@ -8,10 +8,31 @@ export default {
   },
   data() {
     return {
-      name: "",
-      email: "",
-      comment: "",
+      form: {
+        name: "",
+        email: "",
+        comment: "",
+      },
     }
+  },
+  methods: {
+    encode(data) {
+      return Object.keys(data)
+        .map(
+          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        )
+        .join("&")
+    },
+    handleSubmit() {
+      fetch("/", {
+        method: "post",
+        header: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: this.encode({
+          "form-name": "contact",
+          ...this.form,
+        }),
+      })
+    },
   },
 }
 </script>
@@ -20,14 +41,7 @@ export default {
   <div>
     <BaseHeadingH1 class="capitalize">{{ $route.name }}</BaseHeadingH1>
 
-    <form
-      class="flex flex-col"
-      name="contact"
-      method="post"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
-      action="/contact/thanks"
-    >
+    <form class="flex flex-col" name="contact" @submit.prevent="handleSubmit">
       <div class="grid md:grid-cols-2 gap-6 mb-8">
         <div class="flex flex-col">
           <label class="text-lg font-bold mb-3" for="name">Name</label>
@@ -35,7 +49,7 @@ export default {
             id="name"
             type="text"
             class="border border-gray-300 p-2"
-            v-model="name"
+            v-model="form.name"
           />
         </div>
 
@@ -45,7 +59,7 @@ export default {
             id="email"
             type="email"
             class="border border-gray-300 p-2"
-            v-model="email"
+            v-model="form.email"
           />
         </div>
       </div>
@@ -56,7 +70,7 @@ export default {
           id="comment"
           class="border border-gray-300 p-2"
           rows="8"
-          v-model="comment"
+          v-model="form.comment"
         />
       </div>
 
