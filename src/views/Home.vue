@@ -1,15 +1,15 @@
 <script>
-import BaseCarousel from '../components/base/BaseCarousel';
-import EvelynDr from '../assets/images/evelyn-dr.jpg';
-import Roan from '../assets/images/roan.jpg';
-import Donut from '../assets/images/home6.jpg';
-import Headshot from '../assets/images/headshot.jpg';
-import E2 from '../assets/images/e2.jpg';
-import E3 from '../assets/images/e3.jpg';
-import E4 from '../assets/images/e4.jpg';
+import BaseCarousel from "../components/base/BaseCarousel"
+import EvelynDr from "../assets/images/evelyn-dr.jpg"
+import Roan from "../assets/images/roan.jpg"
+import Donut from "../assets/images/home6.jpg"
+import Headshot from "../assets/images/headshot.jpg"
+import E2 from "../assets/images/e2.jpg"
+import E3 from "../assets/images/e3.jpg"
+import E4 from "../assets/images/e4.jpg"
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
     BaseCarousel,
   },
@@ -18,15 +18,15 @@ export default {
       images: [
         {
           id: 0,
-          src: Headshot,
-        },
-        {
-          id: 1,
           src: EvelynDr,
         },
         {
-          id: 2,
+          id: 1,
           src: Roan,
+        },
+        {
+          id: 2,
+          src: Headshot,
         },
         {
           id: 3,
@@ -45,9 +45,9 @@ export default {
           src: E4,
         },
       ],
-    };
+    }
   },
-};
+}
 </script>
 
 <template>
