@@ -50,7 +50,13 @@ export default {
   <div>
     <BaseHeadingH1 class="capitalize">{{ $route.name }}</BaseHeadingH1>
 
-    <form class="flex flex-col" name="contact" @submit.prevent="handleSubmit">
+    <form
+      class="flex flex-col"
+      name="contact"
+      method="post"
+      data-netlify="true"
+      action="/contact/thanks"
+    >
       <div class="grid md:grid-cols-2 gap-6 mb-8">
         <div class="flex flex-col">
           <label class="text-lg font-bold mb-3" for="name">Name</label>
