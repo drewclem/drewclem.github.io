@@ -105,9 +105,7 @@ export default {
     <p class="mt-12 mb-3 text-sm text-red-500">
       Am I the droid you're looking for?
     </p>
-    <button class="btn">
-      <router-link to="/contact" class="no-underline">Message Me</router-link>
-    </button>
+    <router-link to="/contact" class="btn no-underline">Message Me</router-link>
   </div>
 </template>
 
