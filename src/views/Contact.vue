@@ -24,7 +24,7 @@ export default {
         .join("&")
     },
     handleSubmit() {
-      fetch("/", {
+      fetch("/contact", {
         method: "post",
         header: { "Content-Type": "application/x-www-form-urlencoded" },
         body: this.encode({
@@ -32,6 +32,8 @@ export default {
           ...this.form,
         }),
       })
+        .then(() => console.log("success"))
+        .catch(e => console.error(e))
     },
   },
 }
