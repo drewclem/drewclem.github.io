@@ -24,7 +24,7 @@ export default {
         .join("&")
     },
     handleSubmit() {
-      fetch("/contact", {
+      fetch("/", {
         method: "post",
         header: { "Content-Type": "application/x-www-form-urlencoded" },
         body: this.encode({
@@ -32,7 +32,10 @@ export default {
           ...this.form,
         }),
       })
-        .then(() => console.log("success"))
+        .then(() => {
+          console.log("success")
+          this.$router.push("/contact/thanks")
+        })
         .catch(e => console.error(e))
     },
   },
