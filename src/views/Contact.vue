@@ -26,7 +26,7 @@ export default {
     handleSubmit() {
       fetch("/", {
         method: "post",
-        header: { "Content-Type": "application/x-www-form-urlencoded" },
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: this.encode({
           "form-name": "contact",
           ...this.form,
