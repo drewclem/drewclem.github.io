@@ -24,7 +24,7 @@ export default {
         .join("&")
     },
     handleSubmit() {
-      fetch("/", {
+      fetch("/contact", {
         method: "post",
         header: { "Content-Type": "application/x-www-form-urlencoded" },
         body: this.encode({
