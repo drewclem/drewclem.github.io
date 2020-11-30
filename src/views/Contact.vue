@@ -57,6 +57,8 @@ export default {
       @submit.prevent="handleSubmit"
       data-netlify="true"
     >
+      <input type="hidden" name="form-name" value="contact" />
+
       <div class="grid md:grid-cols-2 gap-6 mb-8">
         <div class="flex flex-col">
           <label class="text-lg font-bold mb-3" for="name">Name</label>
@@ -95,8 +97,6 @@ export default {
           <input name="bot-field" />
         </label>
       </p>
-
-      <input type="hidden" name="form-name" value="contact" />
 
       <button class="btn w-32">Send</button>
     </form>
