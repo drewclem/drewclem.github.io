@@ -54,7 +54,7 @@ export default {
       class="flex flex-col"
       name="contact"
       method="POST"
-      @submit.prevent="handleSubmit"
+      action="/contact/thanks"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
     >
