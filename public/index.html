@@ -8,7 +8,12 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
-    <form name="contact" netlify-honeypot="bot-field" netlify hidden>
+    <form
+      name="contact"
+      netlify-honeypot="bot-field"
+      data-netlify="true"
+      hidden
+    >
       <input type="text" name="name" />
       <input type="text" name="email" />
       <textarea name="comment"></textarea>
