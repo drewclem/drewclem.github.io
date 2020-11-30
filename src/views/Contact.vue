@@ -24,7 +24,7 @@ export default {
         .join("&")
     },
     handleSubmit() {
-      fetch("/contact", {
+      fetch("/", {
         method: "post",
         header: { "Content-Type": "application/x-www-form-urlencoded" },
         body: this.encode({
@@ -55,7 +55,7 @@ export default {
       name="contact"
       method="POST"
       @submit.prevent="handleSubmit"
-      data-netlify="true"
+      :data-netlify="true"
     >
       <input type="hidden" name="form-name" value="contact" />
 
