@@ -53,6 +53,7 @@ export default {
     <form
       class="flex flex-col"
       name="contact"
+      method="POST"
       @submit.prevent="handleSubmit"
       data-netlify="true"
     >
