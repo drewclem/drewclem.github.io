@@ -34,7 +34,7 @@ export default {
           title: 'FnF App',
           description:
             'The FNF app is a full-stack project with a Node API hosted on heroku and a Gatsby front-end hosted on Netlify. The goal of this project was to build a read-only API and display the data on a separately hosted front-end.',
-          url: 'https://fnfapp.com',
+          url: 'https://sad-heisenberg-dd2c9d.netlify.app/',
           tech: ['Gatsby', 'Node', 'Tailwind'],
           github: 'https://github.com/drewclem/colt',
         },
