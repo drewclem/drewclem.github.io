@@ -25,7 +25,7 @@ export default {
           title: 'ColtXP',
           description:
             "Colt is a place where beginners looking to gain real-world experience can pair with seasoned developers to work through github issues on live projects. Everyone starts at the bottom, but not everyone has someone to help them along the way. ColtXP's aim is to change that by giving juniors a place to find senior dev's willing to pay it forward.",
-          url: 'https://coltxp.com',
+          url: 'https://coltxp.netlify.app/',
           tech: ['Vue', 'Firebase', 'Tailwind'],
           github: 'https://github.com/drewclem/colt',
         },
