@@ -1,52 +1,6 @@
 <script>
-import BaseCarousel from "../components/base/BaseCarousel"
-import EvelynDr from "../assets/images/evelyn-dr.jpg"
-import Roan from "../assets/images/roan.jpg"
-import Donut from "../assets/images/home6.jpg"
-import Headshot from "../assets/images/headshot.jpg"
-import E2 from "../assets/images/e2.jpg"
-import E3 from "../assets/images/e3.jpg"
-import E4 from "../assets/images/e4.jpg"
-
 export default {
   name: "Home",
-  components: {
-    BaseCarousel,
-  },
-  data: function() {
-    return {
-      images: [
-        {
-          id: 0,
-          src: EvelynDr,
-        },
-        {
-          id: 1,
-          src: Roan,
-        },
-        {
-          id: 2,
-          src: Headshot,
-        },
-        {
-          id: 3,
-          src: Donut,
-        },
-        {
-          id: 4,
-          src: E2,
-        },
-        {
-          id: 5,
-          src: E3,
-        },
-        {
-          id: 6,
-          src: E4,
-        },
-      ],
-    }
-  },
 }
 </script>
 
@@ -101,7 +55,13 @@ export default {
           </div>
         </div>
         <div class="w-3/4 mt-12 lg:w-1/3 lg:-ml-24">
-          <BaseCarousel :slides="images" type="image" class="hidden md:block" />
+          <div class="slide rounded-full overflow-hidden hidden md:block">
+            <img
+              src="../assets/images/drew.jpg"
+              alt="Drew sitting at his desk"
+              class="object-center object-cover h-full"
+            />
+          </div>
         </div>
       </div>
 
@@ -152,6 +112,12 @@ export default {
   @apply text-red-500 underline;
 }
 
+.slide {
+  height: 200px;
+  width: 200px;
+  aspect-ratio: 1/1;
+}
+
 .appearance-list li {
   @apply mb-4;
 }
@@ -180,6 +146,13 @@ export default {
     margin-left: -111px;
     position: absolute;
     margin-top: 162px;
+  }
+}
+
+@media (min-width: 960px) {
+  .slide {
+    height: 250px;
+    width: 250px;
   }
 }
 </style>
