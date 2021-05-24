@@ -98,6 +98,12 @@ export default {
         </li>
 
         <li>
+          <a href="https://www.youtube.com/watch?v=5lXDcP4WHN4"
+            >James Q Quick Live Stream</a
+          >
+        </li>
+
+        <li>
           <a href="https://dnc.show/episodes/d52b07f8"
             >Does Not Compute Podcast</a
           >
