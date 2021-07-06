@@ -60,6 +60,7 @@ export default {
               src="../assets/images/drew.jpg"
               alt="Drew sitting at his desk"
               class="object-center object-cover h-full"
+              lazy
             />
           </div>
         </div>
@@ -80,31 +81,40 @@ export default {
 
       <ul class="list-disc ml-5 appearance-list">
         <li>
-          <a href="https://virtualcoffee.io/podcast/0106-drew/">
+          <a
+            class="underline"
+            href="https://virtualcoffee.io/podcast/0106-drew/"
+          >
             VirtualCoffee Podcast
           </a>
         </li>
 
         <li>
-          <a href="https://www.youtube.com/watch?v=PDytThYBSvA"
+          <a
+            class="underline"
+            href="https://www.youtube.com/watch?v=PDytThYBSvA"
             >VirtualCoffee Live Panel</a
           >
         </li>
 
         <li>
-          <a href="https://thatsmyjamstack.com/posts/drew-clements/"
+          <a
+            class="underline"
+            href="https://thatsmyjamstack.com/posts/drew-clements/"
             >That's My Jamstack Podcast</a
           >
         </li>
 
         <li>
-          <a href="https://www.youtube.com/watch?v=5lXDcP4WHN4"
+          <a
+            class="underline"
+            href="https://www.youtube.com/watch?v=5lXDcP4WHN4"
             >James Q Quick Live Stream</a
           >
         </li>
 
         <li>
-          <a href="https://dnc.show/episodes/d52b07f8"
+          <a class="underline" href="https://dnc.show/episodes/d52b07f8"
             >Does Not Compute Podcast</a
           >
         </li>
