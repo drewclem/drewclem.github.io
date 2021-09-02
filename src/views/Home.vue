@@ -39,10 +39,10 @@ export default {
               front-end engineer at
 
               <a
-                href="https://fostercommerce.com"
+                href="https://nacelle.com"
                 target="_blank"
                 rel="noopener no referrer"
-                >Foster Commerce</a
+                >Nacelle</a
               >
               ! Founder of
               <a
