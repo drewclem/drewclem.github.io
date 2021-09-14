@@ -61,9 +61,3 @@ export default {
     </section>
   </div>
 </template>
-
-<style scoped>
-  .highlight__panel {
-    display: none;
-  }
-</style>

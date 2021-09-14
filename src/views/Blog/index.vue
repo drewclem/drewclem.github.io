@@ -20,7 +20,7 @@ export default {
         method: 'GET',
       })
         .then((res) => res.json())
-        .then((data) => (this.articles = data));
+        .then((data) => this.articles = data.filter(item => !item.organization));
 
       return res;
     },
