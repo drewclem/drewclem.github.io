@@ -11,14 +11,17 @@ export default {
       articles: [],
     }
   },
-  created() {
+  mounted() {
     this.fetchArticles()
   },
   methods: {
     async fetchArticles() {
-      const res = await fetch("https://dev.to/api/articles?username=drewclem", {
-        method: "GET",
-      })
+      const res = await fetch(
+        "https://dev.to/api/articles?username=drewclem&state=all",
+        {
+          method: "GET",
+        }
+      )
         .then(res => res.json())
         .then(data => (this.articles = data.filter(item => !item.organization)))
 
