@@ -1,31 +1,31 @@
 <script>
-import BaseHeadingH1 from '../../components/base/BaseHeadingH1';
+import BaseHeadingH1 from "../../components/base/BaseHeadingH1"
 
 export default {
-  name: 'Blog',
+  name: "Blog",
   components: {
     BaseHeadingH1,
   },
   data() {
     return {
       articles: [],
-    };
+    }
   },
   created() {
-    this.fetchArticles();
+    this.fetchArticles()
   },
   methods: {
     async fetchArticles() {
-      const res = await fetch('https://dev.to/api/articles?username=drewclem', {
-        method: 'GET',
+      const res = await fetch("https://dev.to/api/articles?username=drewclem", {
+        method: "GET",
       })
-        .then((res) => res.json())
-        .then((data) => this.articles = data.filter(item => !item.organization));
+        .then(res => res.json())
+        .then(data => (this.articles = data.filter(item => !item.organization)))
 
-      return res;
+      return res
     },
   },
-};
+}
 </script>
 
 <template>
@@ -46,10 +46,10 @@ export default {
           {{ article.title }}
         </h2>
 
-        <p class="opacity-75 mb-2" v-html="article.description" />
+        <p class="mb-2" v-html="article.description" />
 
         <router-link
-          class="text-red-500 opacity-75 text-sm hover:opacity-100 underline font-display"
+          class="text-red-500 text-sm underline font-display"
           :to="`blog/${article.slug}`"
           >Read More</router-link
         >

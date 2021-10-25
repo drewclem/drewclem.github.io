@@ -34,7 +34,7 @@ export default {
               </span>
             </h1>
 
-            <p class="leading-relaxed text-blue-900 opacity-75 md:w-4/5">
+            <p class="leading-relaxed text-blue-900 md:w-4/5">
               Hi! I'm just a dad trying to do right by his family! I work as a
               front-end engineer at
 
