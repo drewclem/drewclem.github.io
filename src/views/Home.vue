@@ -57,7 +57,7 @@ export default {
         <div class="w-3/4 mt-12 lg:w-1/3 lg:-ml-24">
           <div class="slide rounded-full overflow-hidden hidden md:block">
             <img
-              src="../assets/images/drew.jpg"
+              src="../assets/images/drew.jpeg"
               alt="Drew sitting at his desk"
               class="object-center object-cover h-full"
               lazy
