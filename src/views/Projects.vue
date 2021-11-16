@@ -8,6 +8,9 @@ export default {
     BaseHeadingH1,
     Github,
   },
+  metaInfo: {
+    title: "Drew Clements | Projects",
+  },
   data: function() {
     return {
       projects: [
@@ -48,7 +51,7 @@ export default {
   <div>
     <BaseHeadingH1 class="capitalize">{{ $route.name }}</BaseHeadingH1>
 
-    <article>
+    <section>
       <ul>
         <li v-for="project in projects" :key="project.id" class="mb-20">
           <h2
@@ -77,7 +80,7 @@ export default {
           </div>
         </li>
       </ul>
-    </article>
+    </section>
   </div>
 </template>
 

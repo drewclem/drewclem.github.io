@@ -6,6 +6,9 @@ export default {
   components: {
     BaseHeadingH1,
   },
+  metaInfo: {
+    title: "Drew Clements | Contact Me",
+  },
   data() {
     return {
       form: {

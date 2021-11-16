@@ -6,6 +6,9 @@ export default {
   components: {
     BaseHeadingH1,
   },
+  metaInfo: {
+    title: "Drew Clements | Blog",
+  },
   data() {
     return {
       articles: [],
@@ -36,7 +39,7 @@ export default {
     <BaseHeadingH1 class="capitalize">{{ $route.name }}</BaseHeadingH1>
 
     <div class="md:w-3/4">
-      <article
+      <section
         class="pb-8 mb-8 border-b border-gray-200"
         v-for="article in articles"
         :key="article.id"
@@ -56,7 +59,7 @@ export default {
           :to="`blog/${article.slug}`"
           >Read More</router-link
         >
-      </article>
+      </section>
     </div>
   </div>
 </template>

@@ -2,38 +2,41 @@
 /*
  * What is this component? What does it do?
  */
-import BaseHeadingH1 from '../../components/base/BaseHeadingH1';
-import Back from '../../assets/svgs/angle-double-left-solid.svg';
+import BaseHeadingH1 from "../../components/base/BaseHeadingH1"
+import Back from "../../assets/svgs/angle-double-left-solid.svg"
 
 export default {
-  name: 'BlogArticle',
+  name: "BlogArticle",
   components: {
     BaseHeadingH1,
     Back,
   },
+  metaInfo: {
+    title: "Drew Clements | Blog",
+  },
   data() {
     return {
       article: null,
-    };
+    }
   },
   created() {
-    this.fetchArticle();
+    this.fetchArticle()
   },
   methods: {
     async fetchArticle() {
       const res = await fetch(
         `https://dev.to/api/articles/drewclem/${this.$route.params.slug}`,
         {
-          method: 'GET',
+          method: "GET",
         }
       )
-        .then((res) => res.json())
-        .then((data) => (this.article = data));
+        .then(res => res.json())
+        .then(data => (this.article = data))
 
-      return res;
+      return res
     },
   },
-};
+}
 </script>
 
 <template>

@@ -9,6 +9,9 @@ export default {
   components: {
     BaseHeadingH1,
   },
+  metaInfo: {
+    title: "Drew Clements | Thanks",
+  },
 }
 </script>
 

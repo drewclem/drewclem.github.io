@@ -9,14 +9,67 @@
 </template>
 
 <script>
-import GlobalHeader from './components/global/GlobalHeader';
+import GlobalHeader from "./components/global/GlobalHeader"
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     GlobalHeader,
   },
-};
+  metaInfo: {
+    title: "Drew Clements | Frontend Engineer",
+    meta: [
+      {
+        vmid: "description",
+        name: "description",
+        content:
+          "Drew Clements is a frontend engineer that currently works at Nacelle.",
+      },
+      {
+        property: "og:title",
+        content: "Drew Clements | Frontend Engineer",
+        vmid: "og:title",
+      },
+      {
+        property: "og:description",
+        content:
+          "Drew Clements is a frontend engineer that currently works at Nacelle.",
+        vmid: "og:description",
+      },
+      {
+        property: "og:image",
+        content: "./og-image.png",
+        vmid: "og:image",
+      },
+      {
+        property: "twitter:card",
+        content: "summary_large_image",
+        vmid: "twitter:card",
+      },
+      {
+        property: "twitter:creator",
+        content: "@drewclemcr8",
+        vmid: "twitter:creator",
+      },
+      {
+        property: "twitter:title",
+        content: "Drew Clements | Frontend Engineer",
+        vmid: "twitter:title",
+      },
+      {
+        property: "twitter:description",
+        content:
+          "Drew Clements is a frontend engineer that currently works at Nacelle.",
+        vmid: "twitter:description",
+      },
+      {
+        property: "twitter:image",
+        content: "./og-image.png",
+        vmid: "twitter:image",
+      },
+    ],
+  },
+}
 </script>
 
 <style scoped>
