@@ -65,3 +65,21 @@ ol {
 section .article-wrapper .highlight .highlight__panel .highlight__panel-action {
   display: none;
 }
+
+p code,
+li code {
+  @apply bg-gray-200 text-red-700 p-1;
+}
+
+blockquote {
+  @apply border-l-2 border-red-500 pl-8;
+}
+
+code .c1,
+code .c {
+  @apply text-gray-700;
+}
+
+.highlight {
+  @apply rounded-lg;
+}
