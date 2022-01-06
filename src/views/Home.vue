@@ -59,12 +59,12 @@ export default {
           </div>
         </div>
 
-        <div class="hidden md:block w-1/2 lg:w-1/3 mt-12  lg:-ml-20">
+        <div class="hidden md:block w-1/2 lg:w-1/3 mt-12 lg:-ml-20">
           <div class="rounded-full overflow-hidden">
             <img
               src="../assets/images/drew.jpeg"
               alt="Drew sitting at his desk"
-              class="object-center object-cover h-full"
+              class="object-center object-cover"
               lazy
             />
           </div>
