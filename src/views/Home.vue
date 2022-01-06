@@ -8,7 +8,7 @@ export default {
   <div>
     <section>
       <div class="flex-row md:flex">
-        <div class="relative w-3/4 lg:w-2/3">
+        <div class="relative w-5/6 sm:w-3/4 lg:w-2/3">
           <div class="absolute hidden w-12 h-12 bg-red-500 md:block"></div>
 
           <p
@@ -23,7 +23,7 @@ export default {
 
           <div class="hero-lockup">
             <h1
-              class="mb-12 -mt-3 text-6xl font-black leading-none font-display"
+              class="mb-8 lg:mb-12 -mt-3 text-6xl font-black leading-none font-display"
             >
               Develop<br />
               <span class="text-gray-300">er</span>
@@ -34,6 +34,17 @@ export default {
               </span>
             </h1>
 
+            <div class="md:hidden block w-3/4 mb-8">
+              <div class="rounded-full overflow-hidden">
+                <img
+                  src="../assets/images/drew.jpeg"
+                  alt="Drew sitting at his desk"
+                  class="object-center object-cover h-full"
+                  lazy
+                />
+              </div>
+            </div>
+
             <p class="leading-relaxed text-blue-900 md:w-4/5">
               Hi! I'm just a dad trying to do right by his family! I work as a
               front-end engineer at
@@ -42,20 +53,14 @@ export default {
                 href="https://nacelle.com"
                 target="_blank"
                 rel="noopener no referrer"
-                >Nacelle</a
+                >Nacelle.</a
               >
-              ! Founder of
-              <a
-                href="https://protege.dev"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Protege.dev</a
-              >.
             </p>
           </div>
         </div>
-        <div class="w-3/4 mt-12 lg:w-1/3 lg:-ml-24">
-          <div class="slide rounded-full overflow-hidden hidden md:block">
+
+        <div class="hidden md:block w-1/2 lg:w-1/3 mt-12  lg:-ml-20">
+          <div class="rounded-full overflow-hidden">
             <img
               src="../assets/images/drew.jpeg"
               alt="Drew sitting at his desk"
@@ -126,12 +131,6 @@ export default {
 <style lang="postcss" scoped>
 .hero-lockup a {
   @apply text-red-500 underline;
-}
-
-.slide {
-  height: 200px;
-  width: 200px;
-  aspect-ratio: 1/1;
 }
 
 .appearance-list li {
