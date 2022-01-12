@@ -39,7 +39,7 @@ export default {
                 <img
                   src="../assets/images/drew.jpeg"
                   alt="Drew sitting at his desk"
-                  class="object-center object-cover h-full"
+                  class="object-center object-cover"
                   lazy
                 />
               </div>
@@ -161,13 +161,6 @@ export default {
     margin-left: -111px;
     position: absolute;
     margin-top: 162px;
-  }
-}
-
-@media (min-width: 960px) {
-  .slide {
-    height: 250px;
-    width: 250px;
   }
 }
 </style>
