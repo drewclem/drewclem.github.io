@@ -70,6 +70,7 @@ export default {
             type="text"
             class="border border-gray-300 p-2"
             v-model="form.name"
+            required
           />
         </div>
 
@@ -80,6 +81,7 @@ export default {
             type="email"
             class="border border-gray-300 p-2"
             v-model="form.email"
+            required
           />
         </div>
       </div>
@@ -91,6 +93,7 @@ export default {
           class="border border-gray-300 p-2"
           rows="8"
           v-model="form.comment"
+          required
         />
       </div>
 
