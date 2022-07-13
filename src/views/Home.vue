@@ -88,6 +88,15 @@ export default {
         <li>
           <a
             class="underline"
+            href="https://www.twitch.tv/videos/1529770326?t=0h9m17s"
+          >
+            LiveCoding.ca with Nick Taylor
+          </a>
+        </li>
+        
+        <li>
+          <a
+            class="underline"
             href="https://virtualcoffee.io/podcast/0106-drew/"
           >
             VirtualCoffee Podcast
