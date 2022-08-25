@@ -1,14 +1,20 @@
 <script>
   import NavItem from '$lib/nav-item.svelte'
+
+	let isMobileNavOpen = false
+
+	function toggleNav(data) {
+		isMobileNavOpen = data
+	}
 </script>
 
 <header
-	class="w-full md:w-[200px] md:bg-gray-200 absolute h-full top-0 md:fixed flex md:items-center flex-col md:pt-24"
+	class="w-full md:w-[200px] md:bg-gray-200 absolute h-full top-0 md:fixed flex md:items-center flex-col md:pt-24 overflow-x-hidden"
 >
-	<div class="p-4 flex flex-col justify-center">
+	<div class="hidden lg:flex p-4 flex-col justify-center">
 		<a
 			href="/"
-			class="font-display font-black text-red-500 text-4xl md:text-6xl mx-auto mb-0 md:mb-8"
+			class="font-display font-black text-red-500 text-4xl md:text-6xl mx-auto mb-0 md:mb-8 tracking-tighter"
 		>
 			dC
 		</a>
@@ -26,5 +32,69 @@
 				</li>
 			</ul>
 		</nav>
+	</div>
+
+	<div class="relative lg:hidden p-4">
+		<div class="flex justify-between ">
+			<a
+				href="/"
+				class="font-display font-black text-red-500 text-4xl md:text-6xl mb-0 md:mb-8 tracking-tighter"
+				>dC</a
+			>
+
+			<button on:click={() => toggleNav(true)} type="button">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 24 24"
+					fill="currentColor"
+					class="w-8 h-8"
+				>
+					<path
+						fill-rule="evenodd"
+						d="M10.5 6a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm0 6a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm0 6a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+						clip-rule="evenodd"
+					/>
+				</svg>
+			</button>
+		</div>
+
+		<nav
+			class={`${isMobileNavOpen ? 'translate-x-0' : 'translate-x-full'} transition duration-150 ease-in-out absolute right-0 top-0 w-full h-screen z-50 flex`}
+		>
+			<div>
+				<button
+					class="bg-white drop-shadow-md mr-4 h-12 w-12 ml-4 mt-4 flex justify-center items-center rounded-full"
+					on:click={() => toggleNav(false)}
+					type="button"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="w-6 h-6"
+					>
+						<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m-15 0l15 15" />
+					</svg>
+				</button>
+			</div>
+
+			<ul class="w-full h-screen bg-white uppercase font-display p-4">
+				<li>
+					<NavItem href="/projects">Projects</NavItem>
+				</li>
+				<li>
+					<NavItem href="/blog">Blog</NavItem>
+				</li>
+				<li>
+					<NavItem href="/contact">Contact</NavItem>
+				</li>
+			</ul>
+		</nav>
+		<div
+			class={`${isMobileNavOpen ? 'opacity-50 inset-0' : 'opacity-0'} bg-black absolute h-screen pointer-events-none transition duration-150 ease-in-out z-10`}
+			on:click={() => toggleNav(false)}
+		/>
 	</div>
 </header>
