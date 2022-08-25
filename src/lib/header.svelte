@@ -1,11 +1,26 @@
 <script>
   import NavItem from '$lib/nav-item.svelte'
+	import {isMobileNavOpen} from './../store.js'
 
-	let isMobileNavOpen = false
-
+	export /**
+					* @type {any}
+					*/
+					let isNavOpen
+					
+					/**
+					 * @param {boolean} data
+					 */
 	function toggleNav(data) {
-		isMobileNavOpen = data
+		const mainEl = document.querySelector('#main')
+		isMobileNavOpen.update(value => data)
+
+		if(data) {
+			mainEl?.setAttribute('inert', 'true')
+		} else {
+			mainEl?.removeAttribute('inert')
+		}
 	}
+
 </script>
 
 <header
@@ -43,6 +58,7 @@
 			>
 
 			<button on:click={() => toggleNav(true)} type="button">
+				<span class="sr-only">Open mobile menu</span>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 24 24"
@@ -59,14 +75,15 @@
 		</div>
 
 		<nav
-			class={`${isMobileNavOpen ? 'translate-x-0' : 'translate-x-full'} transition duration-150 ease-in-out absolute right-0 top-0 w-full h-screen z-50 flex`}
+			class={`${isNavOpen ? 'translate-x-0' : 'translate-x-full'} transition duration-150 ease-in-out absolute right-0 top-0 w-full h-screen z-50 flex`}
 		>
-			<div>
+			<div on:click={() => toggleNav(false)}>
 				<button
 					class="bg-white drop-shadow-md mr-4 h-12 w-12 ml-4 mt-4 flex justify-center items-center rounded-full"
 					on:click={() => toggleNav(false)}
 					type="button"
 				>
+					<span class="sr-only">Close mobile menu</span>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						fill="none"
@@ -93,8 +110,7 @@
 			</ul>
 		</nav>
 		<div
-			class={`${isMobileNavOpen ? 'opacity-50 inset-0' : 'opacity-0'} bg-black absolute h-screen pointer-events-none transition duration-150 ease-in-out z-10`}
-			on:click={() => toggleNav(false)}
+			class={`${isNavOpen ? 'opacity-50 inset-0' : 'opacity-0'} bg-black absolute h-screen pointer-events-none transition duration-150 ease-in-out z-10`}
 		/>
 	</div>
 </header>

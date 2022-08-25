@@ -25,7 +25,7 @@
 						</span>
 					</h1>
 
-					<div class="md:hidden block w-3/4 mb-8">
+					<div class="md:hidden block w-3/4 mb-6">
 						<div class="rounded-full overflow-hidden">
 							<img
 								src={imgSrc}
@@ -37,7 +37,8 @@
 					</div>
 
 					<p class="leading-relaxed text-blue-900 md:w-4/5">
-						Hi! I'm just a dad trying to do right by his family! I work as a front-end engineer at
+						Hi<span class="lg:hidden">, I'm Drew Clements</span>! I'm just a dad trying to do right
+						by his family! I work as a front-end engineer at
 
 						<a
 							class="text-red-500 underline"
@@ -61,7 +62,7 @@
 			</div>
 		</div>
 
-		<p class="mt-12 mb-3 text-sm text-red-500">Am I the droid you're looking for?</p>
+		<p class="mt-8 lg:mt-12 mb-3 text-sm text-red-500">Am I the droid you're looking for?</p>
 		<a href="/contact" class="btn no-underline">Message Me</a>
 	</section>
 
