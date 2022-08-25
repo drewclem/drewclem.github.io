@@ -1,10 +1,9 @@
 <script>
   import NavItem from '$lib/nav-item.svelte'
-
 </script>
 
 <header
-	class="w-full md:w-auto md:bg-gray-200 absolute h-full top-0 md:fixed flex md:items-center flex-col md:pt-24"
+	class="w-full md:w-[200px] md:bg-gray-200 absolute h-full top-0 md:fixed flex md:items-center flex-col md:pt-24"
 >
 	<div class="p-4 flex flex-col justify-center">
 		<a

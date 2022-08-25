@@ -31,7 +31,7 @@
 								src={imgSrc}
 								alt="Drew sitting at his desk"
 								class="object-center object-cover"
-								lazy
+								loading="lazy"
 							/>
 						</div>
 					</div>
@@ -39,7 +39,12 @@
 					<p class="leading-relaxed text-blue-900 md:w-4/5">
 						Hi! I'm just a dad trying to do right by his family! I work as a front-end engineer at
 
-						<a href="https://nacelle.com" target="_blank" rel="noopener no referrer">Nacelle.</a>
+						<a
+							class="text-red-500 underline"
+							href="https://nacelle.com"
+							target="_blank"
+							rel="noopener no referrer">Nacelle.</a
+						>
 					</p>
 				</div>
 			</div>
@@ -50,7 +55,7 @@
 						src={imgSrc}
 						alt="Drew sitting at his desk"
 						class="object-center object-cover"
-						lazy
+						loading="lazy"
 					/>
 				</div>
 			</div>
@@ -102,10 +107,6 @@
 </div>
 
 <style scoped>
-	.hero-lockup a {
-		@apply text-red-500 underline;
-	}
-
 	.appearance-list li {
 		@apply mb-4;
 	}

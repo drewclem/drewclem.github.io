@@ -1,7 +1,7 @@
 <script>
  export /**
-* @type {string | null | undefined}
-*/
+        * @type {string | null | undefined}
+        */
   let href
 </script>
 
