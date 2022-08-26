@@ -1,6 +1,9 @@
 <script>
 	import NavItem from '$lib/nav-item.svelte';
 	import { isMobileNavOpen } from './../store.js';
+	import { navigating } from '$app/stores';
+
+	$: if ($navigating) toggleNav(false);
 
 	export /**
 	 * @type {any}
@@ -12,15 +15,29 @@
 	 */
 	function toggleNav(data) {
 		const mainEl = document.querySelector('#main');
+		const mobileNav = document.querySelector('#mobileNav');
+		const mobileHeaderLink = document.querySelector('#mobileHeaderLink');
 		isMobileNavOpen.update((value) => data);
 
 		if (data) {
 			mainEl?.setAttribute('inert', 'true');
+			mobileHeaderLink?.setAttribute('inert', 'true');
+			mobileNav?.removeAttribute('inert');
 		} else {
+			mobileNav?.setAttribute('inert', 'true');
 			mainEl?.removeAttribute('inert');
+			mobileHeaderLink?.removeAttribute('inert');
 		}
 	}
+
+	const handleKeydown = (/** @type {{ key: string; }} */ e) => {
+		if (e.key === 'Escape') {
+			toggleNav(false);
+		}
+	};
 </script>
+
+<svelte:window on:keydown={handleKeydown} />
 
 <header
 	class="lg:h-screen w-full md:w-[200px] md:bg-gray-200 absolute top-0 md:fixed flex md:items-center flex-col md:pt-24 overflow-x-hidden"
@@ -51,6 +68,7 @@
 	<div class={`${isNavOpen ? 'h-screen' : ''} relative lg:hidden p-4`}>
 		<div class="flex justify-between ">
 			<a
+				id="mobileHeaderLink"
 				href="/"
 				class="font-display font-black text-red-500 text-4xl md:text-6xl mb-0 md:mb-8 tracking-tighter"
 				>dC</a
@@ -74,9 +92,11 @@
 		</div>
 
 		<nav
+			id="mobileNav"
 			class={`${
 				isNavOpen ? 'translate-x-0' : 'translate-x-full'
 			} transition duration-150 ease-in-out absolute right-0 top-0 w-full h-screen z-50 flex`}
+			inert={true}
 		>
 			<div on:click={() => toggleNav(false)}>
 				<button

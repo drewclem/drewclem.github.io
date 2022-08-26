@@ -4,9 +4,6 @@
 	import 'wicg-inert';
 
 	import { isMobileNavOpen } from './../store.js';
-	import { navigating } from '$app/stores';
-
-	$: if ($navigating) closeMobileMenu();
 
 	/**
 	 * @type {boolean}
@@ -16,22 +13,7 @@
 	const unsubscribe = isMobileNavOpen.subscribe((value) => {
 		isNavOpen = value;
 	});
-
-	const handleKeydown = (/** @type {{ key: string; }} */ e) => {
-		if (e.key === 'Escape' && isNavOpen) {
-			isMobileNavOpen.update((value) => false);
-		}
-	};
-
-	function closeMobileMenu() {
-		const mainEl = document.querySelector('#main');
-
-		mainEl?.removeAttribute('inert');
-		isMobileNavOpen.update((value) => false);
-	}
 </script>
-
-<svelte:window on:keydown={handleKeydown} />
 
 <div class={`${isNavOpen ? 'h-screen' : ''} text-blue-900 font-body overflow-x-hidden`}>
 	<Header {isNavOpen} />
