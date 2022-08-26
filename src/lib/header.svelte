@@ -1,30 +1,29 @@
 <script>
-  import NavItem from '$lib/nav-item.svelte'
-	import {isMobileNavOpen} from './../store.js'
+	import NavItem from '$lib/nav-item.svelte';
+	import { isMobileNavOpen } from './../store.js';
 
 	export /**
-					* @type {any}
-					*/
-					let isNavOpen
-					
-					/**
-					 * @param {boolean} data
-					 */
-	function toggleNav(data) {
-		const mainEl = document.querySelector('#main')
-		isMobileNavOpen.update(value => data)
+	 * @type {any}
+	 */
+	let isNavOpen;
 
-		if(data) {
-			mainEl?.setAttribute('inert', 'true')
+	/**
+	 * @param {boolean} data
+	 */
+	function toggleNav(data) {
+		const mainEl = document.querySelector('#main');
+		isMobileNavOpen.update((value) => data);
+
+		if (data) {
+			mainEl?.setAttribute('inert', 'true');
 		} else {
-			mainEl?.removeAttribute('inert')
+			mainEl?.removeAttribute('inert');
 		}
 	}
-
 </script>
 
 <header
-	class="w-full md:w-[200px] md:bg-gray-200 absolute h-full top-0 md:fixed flex md:items-center flex-col md:pt-24 overflow-x-hidden"
+	class="lg:h-screen w-full md:w-[200px] md:bg-gray-200 absolute top-0 md:fixed flex md:items-center flex-col md:pt-24 overflow-x-hidden"
 >
 	<div class="hidden lg:flex p-4 flex-col justify-center">
 		<a
@@ -49,7 +48,7 @@
 		</nav>
 	</div>
 
-	<div class="relative lg:hidden p-4">
+	<div class={`${isNavOpen ? 'h-screen' : ''} relative lg:hidden p-4`}>
 		<div class="flex justify-between ">
 			<a
 				href="/"
@@ -75,7 +74,9 @@
 		</div>
 
 		<nav
-			class={`${isNavOpen ? 'translate-x-0' : 'translate-x-full'} transition duration-150 ease-in-out absolute right-0 top-0 w-full h-screen z-50 flex`}
+			class={`${
+				isNavOpen ? 'translate-x-0' : 'translate-x-full'
+			} transition duration-150 ease-in-out absolute right-0 top-0 w-full h-screen z-50 flex`}
 		>
 			<div on:click={() => toggleNav(false)}>
 				<button
@@ -110,7 +111,9 @@
 			</ul>
 		</nav>
 		<div
-			class={`${isNavOpen ? 'opacity-50 inset-0' : 'opacity-0'} bg-black absolute h-screen pointer-events-none transition duration-150 ease-in-out z-10`}
+			class={`${
+				isNavOpen ? 'opacity-50 inset-0' : 'opacity-0'
+			} bg-black absolute h-screen pointer-events-none transition duration-150 ease-in-out z-10`}
 		/>
 	</div>
 </header>

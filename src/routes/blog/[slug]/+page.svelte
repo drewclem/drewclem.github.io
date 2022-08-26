@@ -1,26 +1,56 @@
 <script>
-   /**
-  * @type {any}
-  */
-  export let data
+	import PageTitle from '$lib/page-title.svelte';
+
+	/**
+	 * @type {any}
+	 */
+	export let data;
 </script>
 
-<div class="flex justify-between items-baseline">
-	<div class="relative">
-		<div class="w-4 h-4 lg:w-6 lg:h-6 bg-red-500 absolute" />
-		<h1 class="text-4xl lg:text-4xl font-display font-bold ml-4 pt-1 lg:ml-6 lg:pt-3 mb-8">Blog</h1>
-	</div>
+<div class="flex justify-between items-baseline mb-6">
+	<PageTitle>Blog</PageTitle>
 
-	<a class="text-red-600 opacity-75 hover:opacity-100" href="/blog">Back to articles</a>
+	<a class="text-red-600 opacity-75 hover:opacity-100" href="/blog">
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			fill="none"
+			viewBox="0 0 24 24"
+			stroke-width="1.5"
+			stroke="currentColor"
+			class="w-6 h-6 inline -mt-1 mr-3"
+		>
+			<path
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"
+			/>
+		</svg>
+		Back to articles
+	</a>
 </div>
 
 <section>
-	<h2>{data.title}</h2>
+	<h2 class="text-3xl font-bold mb-12">{data.title}</h2>
 	<div class="article-wrapper">
 		{@html data.body_html}
 	</div>
 
-	<a class="text-red-600 opacity-75 hover:opacity-100" href="/blog">Back to articles</a>
+	<a class="text-red-600 opacity-75 hover:opacity-100" href="/blog"
+		><svg
+			xmlns="http://www.w3.org/2000/svg"
+			fill="none"
+			viewBox="0 0 24 24"
+			stroke-width="1.5"
+			stroke="currentColor"
+			class="w-6 h-6 inline -mt-1 mr-3"
+		>
+			<path
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"
+			/>
+		</svg>Back to articles</a
+	>
 </section>
 
 <style scoped>

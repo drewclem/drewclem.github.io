@@ -1,25 +1,23 @@
 <script>
-  /**
-* @type {any[]}
-*/
-  let articles = []
-  async function fetchArticles() {
-    const res = await fetch('https://dev.to/api/articles?username=drewclem&state=all', {
-      method: 'GET'
-    })
+	import PageTitle from '$lib/page-title.svelte';
+	/**
+	 * @type {any[]}
+	 */
+	let articles = [];
+	async function fetchArticles() {
+		const res = await fetch('https://dev.to/api/articles?username=drewclem&state=all', {
+			method: 'GET'
+		});
 
-    const data = await res.json()
+		const data = await res.json();
 
-    articles = data
-  }
+		articles = data;
+	}
 
-  fetchArticles()
+	fetchArticles();
 </script>
 
-<div class="relative">
-	<div class="w-4 h-4 lg:w-6 lg:h-6 bg-red-500 absolute" />
-	<h1 class="text-4xl lg:text-4xl font-display font-bold ml-4 pt-1 lg:ml-6 lg:pt-3 mb-8">Blog</h1>
-</div>
+<PageTitle>Blog</PageTitle>
 
 <section class="md:w-3/4">
 	{#each articles as article}

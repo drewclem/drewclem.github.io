@@ -1,42 +1,38 @@
 <script>
-const projects = [
-  {
-    id: 0,
-    title: "Protege.dev",
-    description:
-      "Protege.dev is a job board tailored for junior developers looking for remote opportunities. This project has end-to-end testing with Cypress.io, form validation React Hook Forms, Form schema with Yup, and wired up to a Firebase database for the back-end.",
-    url: "https://protege.dev",
-    tech: ["React", "Firebase", "Tailwind", "Cypress.io"],
-    github: "https://github.com/drewclem/protege",
-  },
-  {
-    id: 1,
-    title: "ColtXP",
-    description:
-      "Colt is a place where beginners looking to gain real-world experience can pair with seasoned developers to work through github issues on live projects. Everyone starts at the bottom, but not everyone has someone to help them along the way. ColtXP's aim is to change that by giving juniors a place to find senior dev's willing to pay it forward.",
-    url: "https://coltxp.netlify.app/",
-    tech: ["Vue", "Firebase", "Tailwind"],
-    github: "https://github.com/drewclem/colt",
-  },
-  {
-    id: 2,
-    title: "FnF App",
-    description:
-      "The FNF app is a full-stack project with a Node API hosted on heroku and a Gatsby front-end hosted on Netlify. The goal of this project was to build a read-only API and display the data on a separately hosted front-end.",
-    url: "https://sad-heisenberg-dd2c9d.netlify.app/",
-    tech: ["Gatsby", "Node", "Tailwind"],
-    github: "https://github.com/drewclem/colt",
-  },
-]
+	import PageTitle from '$lib/page-title.svelte';
 
+	const projects = [
+		{
+			id: 0,
+			title: 'Protege.dev',
+			description:
+				'Protege.dev is a job board tailored for junior developers looking for remote opportunities. This project has end-to-end testing with Cypress.io, form validation React Hook Forms, Form schema with Yup, and wired up to a Firebase database for the back-end.',
+			url: 'https://protege.dev',
+			tech: ['React', 'Firebase', 'Tailwind', 'Cypress.io'],
+			github: 'https://github.com/drewclem/protege'
+		},
+		{
+			id: 1,
+			title: 'ColtXP',
+			description:
+				"Colt is a place where beginners looking to gain real-world experience can pair with seasoned developers to work through github issues on live projects. Everyone starts at the bottom, but not everyone has someone to help them along the way. ColtXP's aim is to change that by giving juniors a place to find senior dev's willing to pay it forward.",
+			url: 'https://coltxp.netlify.app/',
+			tech: ['Vue', 'Firebase', 'Tailwind'],
+			github: 'https://github.com/drewclem/colt'
+		},
+		{
+			id: 2,
+			title: 'FnF App',
+			description:
+				'The FNF app is a full-stack project with a Node API hosted on heroku and a Gatsby front-end hosted on Netlify. The goal of this project was to build a read-only API and display the data on a separately hosted front-end.',
+			url: 'https://sad-heisenberg-dd2c9d.netlify.app/',
+			tech: ['Gatsby', 'Node', 'Tailwind'],
+			github: 'https://github.com/drewclem/colt'
+		}
+	];
 </script>
 
-<div class="relative">
-	<div class="w-4 h-4 lg:w-6 lg:h-6 bg-red-500 absolute" />
-	<h1 class="text-4xl lg:text-4xl font-display font-bold ml-4 pt-1 lg:ml-6 lg:pt-3 mb-8">
-		Projects
-	</h1>
-</div>
+<PageTitle>Projects</PageTitle>
 
 <section>
 	<ul>

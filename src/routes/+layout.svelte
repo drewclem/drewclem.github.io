@@ -1,26 +1,34 @@
 <script>
-  import '../app.css'
-  import Header from '$lib/header.svelte'
-	import "wicg-inert"
+	import '../app.css';
+	import Header from '$lib/header.svelte';
+	import 'wicg-inert';
 
-	import { isMobileNavOpen } from './../store.js'
+	import { isMobileNavOpen } from './../store.js';
+	import { navigating } from '$app/stores';
+
+	$: if ($navigating) closeMobileMenu();
 
 	/**
-	* @type {boolean}
-	*/
+	 * @type {boolean}
+	 */
 	let isNavOpen;
 
-	const unsubscribe = isMobileNavOpen.subscribe(value => {
-		isNavOpen = value
-	})
+	const unsubscribe = isMobileNavOpen.subscribe((value) => {
+		isNavOpen = value;
+	});
 
 	const handleKeydown = (/** @type {{ key: string; }} */ e) => {
 		if (e.key === 'Escape' && isNavOpen) {
-			isMobileNavOpen.update(value => false)
+			isMobileNavOpen.update((value) => false);
 		}
+	};
+
+	function closeMobileMenu() {
+		const mainEl = document.querySelector('#main');
+
+		mainEl?.removeAttribute('inert');
+		isMobileNavOpen.update((value) => false);
 	}
-
-
 </script>
 
 <svelte:window on:keydown={handleKeydown} />

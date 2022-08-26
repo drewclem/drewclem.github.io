@@ -1,41 +1,37 @@
 <script>
-  /**
-* @param {{ [x: string]: string | number | boolean; }} data
-*/
-  function encode(data) {
-    return Object.keys(data)
-      .map(key => 
-      `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
-    ).join('&')
-  }
+	import PageTitle from '$lib/page-title.svelte';
 
-  function handleSubmit() {
-    fetch("/", {
-      method: "post",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": "contact",
-        ...this.form,
-      }),
-    })
-      .then((/** @type {{ status: number; }} */ res, /** @type {any} */ err) => {
-        if (res.status === 200) {
-          console.log("success")
-          // this.$router.push("/contact/thanks")
-        } else {
-          console.log(err)
-        }
-      })
-      .catch(e => console.error(e))
-  }
+	/**
+	 * @param {{ [x: string]: string | number | boolean; }} data
+	 */
+	function encode(data) {
+		return Object.keys(data)
+			.map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+			.join('&');
+	}
+
+	function handleSubmit() {
+		fetch('/', {
+			method: 'post',
+			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+			body: encode({
+				'form-name': 'contact',
+				...this.form
+			})
+		})
+			.then((/** @type {{ status: number; }} */ res, /** @type {any} */ err) => {
+				if (res.status === 200) {
+					console.log('success');
+					// this.$router.push("/contact/thanks")
+				} else {
+					console.log(err);
+				}
+			})
+			.catch((e) => console.error(e));
+	}
 </script>
 
-<div class="relative">
-	<div class="w-4 h-4 lg:w-6 lg:h-6 bg-red-500 absolute" />
-	<h1 class="text-4xl lg:text-4xl font-display font-bold ml-4 pt-1 lg:ml-6 lg:pt-3 mb-8">
-		Contact
-	</h1>
-</div>
+<PageTitle>Contact</PageTitle>
 
 <form class="flex flex-col" name="contact" data-netlify="true" data-netlify-honeypot="bot-field">
 	<input type="hidden" name="form-name" value="contact" />
