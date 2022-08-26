@@ -88,7 +88,15 @@ export default {
         <li>
           <a
             class="underline"
-            href="https://www.twitch.tv/videos/1529770326?t=0h9m17s"
+            href="https://www.youtube.com/watch?v=2t7zy0hscnM"
+          >
+            Guidance Counselor 2.0
+          </a>
+        </li>
+        <li>
+          <a
+            class="underline"
+            href="https://www.youtube.com/watch?v=6IvYCCzAolY&list=PLcR4ZgxWXeICy2QVTV-6HuEHfl9DcAuq7&index=5"
           >
             LiveCoding.ca with Nick Taylor
           </a>
