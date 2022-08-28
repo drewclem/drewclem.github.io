@@ -54,6 +54,7 @@
 			<label class="text-lg font-bold mb-3" for="name">Name</label>
 			<input
 				id="name"
+				name="name"
 				type="text"
 				class="border border-gray-300 p-2"
 				bind:value={form.name}
@@ -66,6 +67,7 @@
 			<input
 				id="email"
 				type="email"
+				name="email"
 				class="border border-gray-300 p-2"
 				bind:value={form.email}
 				required
@@ -77,6 +79,7 @@
 		<label class="text-lg font-bold mb-3" for="comment">Comment</label>
 		<textarea
 			id="comment"
+			name="comment"
 			class="border border-gray-300 p-2"
 			rows="8"
 			bind:value={form.message}
