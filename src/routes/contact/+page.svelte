@@ -5,7 +5,7 @@
 	let form = {
 		name: '',
 		email: '',
-		message: ''
+		comment: ''
 	};
 
 	function encode(data) {
@@ -76,13 +76,13 @@
 	</div>
 
 	<div class="flex flex-col mb-12">
-		<label class="text-lg font-bold mb-3" for="message">Message</label>
+		<label class="text-lg font-bold mb-3" for="comment">Comment</label>
 		<textarea
-			id="message"
-			name="message"
+			id="comment"
+			name="comment"
 			class="border border-gray-300 p-2"
 			rows="8"
-			bind:value={form.message}
+			bind:value={form.comment}
 			required
 		/>
 	</div>
