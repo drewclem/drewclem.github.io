@@ -76,10 +76,10 @@
 	</div>
 
 	<div class="flex flex-col mb-12">
-		<label class="text-lg font-bold mb-3" for="comment">Comment</label>
+		<label class="text-lg font-bold mb-3" for="message">Message</label>
 		<textarea
-			id="comment"
-			name="comment"
+			id="message"
+			name="message"
 			class="border border-gray-300 p-2"
 			rows="8"
 			bind:value={form.message}
