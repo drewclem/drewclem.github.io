@@ -5,9 +5,6 @@
 
 	import { isMobileNavOpen } from './../store.js';
 
-	/**
-	 * @type {boolean}
-	 */
 	let isNavOpen;
 
 	const unsubscribe = isMobileNavOpen.subscribe((value) => {

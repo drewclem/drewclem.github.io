@@ -1,8 +1,6 @@
 <script>
 	import PageTitle from '$lib/page-title.svelte';
-	/**
-	 * @type {any[]}
-	 */
+
 	let articles = [];
 	async function fetchArticles() {
 		const res = await fetch('https://dev.to/api/articles?username=drewclem&state=all', {

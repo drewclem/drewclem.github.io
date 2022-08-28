@@ -1,28 +1,34 @@
 <script>
+	import { goto } from '$app/navigation';
 	import PageTitle from '$lib/page-title.svelte';
 
-	/**
-	 * @param {{ [x: string]: string | number | boolean; }} data
-	 */
+	let form = {
+		name: '',
+		email: '',
+		message: ''
+	};
+
 	function encode(data) {
 		return Object.keys(data)
 			.map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
 			.join('&');
 	}
 
-	function handleSubmit() {
+	function handleSubmit(e) {
+		e.preventDefault();
+		console.log('here');
 		fetch('/', {
 			method: 'post',
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 			body: encode({
 				'form-name': 'contact',
-				...this.form
+				...form
 			})
 		})
-			.then((/** @type {{ status: number; }} */ res, /** @type {any} */ err) => {
+			.then((res, err) => {
 				if (res.status === 200) {
+					goto('/thanks');
 					console.log('success');
-					// this.$router.push("/contact/thanks")
 				} else {
 					console.log(err);
 				}
@@ -33,7 +39,14 @@
 
 <PageTitle>Contact</PageTitle>
 
-<form class="flex flex-col" name="contact" data-netlify="true" data-netlify-honeypot="bot-field">
+<form
+	method="post"
+	on:submit={handleSubmit}
+	class="flex flex-col"
+	name="contact"
+	data-netlify="true"
+	data-netlify-honeypot="bot-field"
+>
 	<input type="hidden" name="form-name" value="contact" />
 
 	<div class="grid md:grid-cols-2 gap-6 mb-8">
@@ -43,7 +56,7 @@
 				id="name"
 				type="text"
 				class="border border-gray-300 p-2"
-				v-model="form.name"
+				bind:value={form.name}
 				required
 			/>
 		</div>
@@ -54,7 +67,7 @@
 				id="email"
 				type="email"
 				class="border border-gray-300 p-2"
-				v-model="form.email"
+				bind:value={form.email}
 				required
 			/>
 		</div>
@@ -66,7 +79,7 @@
 			id="comment"
 			class="border border-gray-300 p-2"
 			rows="8"
-			v-model="form.comment"
+			bind:value={form.message}
 			required
 		/>
 	</div>

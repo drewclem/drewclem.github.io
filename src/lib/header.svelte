@@ -5,14 +5,8 @@
 
 	$: if ($navigating) toggleNav(false);
 
-	export /**
-	 * @type {any}
-	 */
-	let isNavOpen;
+	export let isNavOpen;
 
-	/**
-	 * @param {boolean} data
-	 */
 	function toggleNav(data) {
 		const mainEl = document.querySelector('#main');
 		const mobileNav = document.querySelector('#mobileNav');
@@ -30,7 +24,7 @@
 		}
 	}
 
-	const handleKeydown = (/** @type {{ key: string; }} */ e) => {
+	const handleKeydown = (e) => {
 		if (e.key === 'Escape') {
 			toggleNav(false);
 		}
