@@ -1,0 +1,22 @@
+<script>
+	import '../app.css';
+	import Header from '$lib/header.svelte';
+	import 'wicg-inert';
+
+	import { isMobileNavOpen } from './../store.js';
+
+	let isNavOpen;
+
+	const unsubscribe = isMobileNavOpen.subscribe((value) => {
+		isNavOpen = value;
+	});
+</script>
+
+<div class={`${isNavOpen ? 'h-screen' : ''} text-blue-900 font-body overflow-x-hidden`}>
+	<Header {isNavOpen} />
+	<main id="main" class="md:ml-48 px-4 mt-24 lg:mt-20 lg:px-0 pb-32">
+		<div class="w-full max-w-3xl mx-auto">
+			<slot />
+		</div>
+	</main>
+</div>
