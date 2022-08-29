@@ -21,7 +21,7 @@
 	<meta name="og:title" content={name} />
 	<meta name="og:description" content={description} />
 	<meta name="og:image" content="https://drewclem.com/images/og-image.png" />
-	<meta name="twitter:card" content="summary_large_card" />
+	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:creator" content="@drewclemcr8" />
 	<meta name="twitter:title" content={name} />
 	<meta name="twitter:description" content={description} />
