@@ -10,7 +10,23 @@
 	const unsubscribe = isMobileNavOpen.subscribe((value) => {
 		isNavOpen = value;
 	});
+
+	const name = 'Drew Clements | Frontend Engineer';
+	const description = 'The portfolio and blog for front-end engineer Drew Clements';
 </script>
+
+<svelte:head>
+	<title>{name}</title>
+	<meta name="description" content={description} />
+	<meta name="og:title" content={name} />
+	<meta name="og:description" content={description} />
+	<meta name="og:image" content="https://drewclem.com/images/og-image.png" />
+	<meta name="twitter:card" content="summary_large_card" />
+	<meta name="twitter:creator" content="@drewclemcr8" />
+	<meta name="twitter:title" content={name} />
+	<meta name="twitter:description" content={description} />
+	<meta name="twitter:image" content="https://drewclem.com/images/og-image.png" />
+</svelte:head>
 
 <div class={`${isNavOpen ? 'h-screen' : ''} text-blue-900 font-body overflow-x-hidden`}>
 	<Header {isNavOpen} />
