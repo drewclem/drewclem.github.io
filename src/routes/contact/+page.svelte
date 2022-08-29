@@ -16,8 +16,7 @@
 
 	function handleSubmit(e) {
 		e.preventDefault();
-		console.log('here');
-		fetch('/', {
+		fetch('/contact', {
 			method: 'post',
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 			body: encode({
@@ -28,7 +27,6 @@
 			.then((res, err) => {
 				if (res.status === 200) {
 					goto('/thanks');
-					console.log('success');
 				} else {
 					console.log(err);
 				}
