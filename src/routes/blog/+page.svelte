@@ -25,7 +25,7 @@
 
 			<div class="mb-2 opacity-75 ">{article.description}</div>
 
-			<a href={`blog/${article.slug}`} class="text-red-600 text-sm underline font-display">
+			<a sveltekit:prefetch href={`blog/${article.slug}`} class="text-red-600 text-sm underline font-display">
 				Read More
 			</a>
 		</article>
