@@ -11,7 +11,7 @@
 		isNavOpen = value;
 	});
 
-	const name = 'Drew Clements | Frontend Engineer';
+	const name = 'Drew Clements | Full-stack Engineer';
 	const description = 'The portfolio and blog for front-end engineer Drew Clements';
 </script>
 
