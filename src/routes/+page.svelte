@@ -37,13 +37,11 @@
 
 				<p class="leading-relaxed text-blue-900 md:w-4/5">
 					Hi<span class="lg:hidden">, I'm Drew Clements</span>! I'm just a dad trying to do right by
-					his family! I work as a front-end engineer at
+					his family! I work as a full-stack engineer at
 
 					<a
 						class="text-red-500 underline"
-						href="https://nacelle.com"
-						target="_blank"
-						rel="noopener no referrer">Nacelle.</a
+						href="https://aryeo.com">Aryeo.</a
 					>
 				</p>
 			</div>
