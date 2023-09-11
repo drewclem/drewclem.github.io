@@ -42,7 +42,7 @@
 					<a
 						class="text-red-500 underline"
 						href="https://aryeo.com">Aryeo.</a
-					>
+					> Building <a class="text-red-500" href="https://heygumball.com>HeyGumball to improve the lives of tattooers.</a>
 				</p>
 			</div>
 		</div>
