@@ -34,7 +34,7 @@
 <svelte:window on:keydown={handleKeydown} />
 
 <header
-	class="lg:h-screen w-full md:w-[200px] md:bg-gray-200 absolute top-0 md:fixed flex md:items-center flex-col md:pt-24 overflow-x-hidden"
+	class="lg:h-screen w-full md:w-[200px] md:bg-gray-200 absolute top-0 md:fixed flex md:items-center flex-col md:pt-24"
 >
 	<div class="hidden lg:flex p-4 flex-col justify-center">
 		<a

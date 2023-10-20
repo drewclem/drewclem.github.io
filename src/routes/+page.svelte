@@ -39,7 +39,7 @@
 					Hi<span class="lg:hidden">, I'm Drew Clements</span>! I'm just a dad trying to do right by
 					his family! I work as a full-stack engineer at
 
-					<a class="text-red-500 underline" href="https://aryeo.com">Aryeo.</a> Building
+					<a class="text-red-500 underline" href="https://zillow.com">Zillow.</a> Building
 					<a class="text-red-500 underline" href="https://heygumball.com">HeyGumball</a> to improve the
 					lives of tattooers.
 				</p>
