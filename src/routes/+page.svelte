@@ -15,6 +15,10 @@
 
 			<div class="absolute transform -rotate-90 border-t-2 border-red-500 hero-redaccent-left" />
 
+<div data-embed-url="https://aryeo-dev.aryeo.test/order">
+  <script src="https://aryeo-dev.aryeo.test/embeds/aryeo-dev"></script>
+</div>
+
 			<div class="hero-lockup">
 				<h1 class="mb-8 lg:mb-12 -mt-3 text-6xl font-black leading-none font-display">
 					Develop<br />
